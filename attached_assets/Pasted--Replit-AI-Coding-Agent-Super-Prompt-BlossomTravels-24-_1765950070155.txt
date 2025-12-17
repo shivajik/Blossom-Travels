@@ -1,0 +1,72 @@
+# Replit AI Coding Agent – Super Prompt: BlossomTravels (24-Hour Ranking Edition)
+
+## **OBJECTIVE**
+Build a production-ready, high-performance travel blog named **“BlossomTravels”** optimized for **immediate indexing and ranking (within 24 hours)**. The site must leverage **Next.js 15 (App Router)** and focus on **AEO (Answer Engine Optimization)** and **GEO (Generative Engine Optimization)** to dominate trending, low-competition queries.
+
+---
+
+## **1. TECH STACK & PERFORMANCE (Non-Negotiable)**
+* **Framework:** Next.js 15 (App Router) – strict usage of Server Components for speed.
+* **Language:** TypeScript (Strict mode).
+* **Styling:** Tailwind CSS (Mobile-first, clean typography for readability).
+* **Content Engine:** MDX (Markdown + React components) for rich content structures.
+* **SEO Package:** `next-sitemap` (auto-generate sitemaps) + Manual JSON-LD Schema.
+* **Images:** `next/image` with aggressive WebP conversion and explicit width/height to prevent layout shifts (CLS < 0.1).
+* **Speed:** Target perfect Core Web Vitals (LCP < 1.2s, INP < 200ms). Use `next/font` for zero layout shift.
+
+---
+
+## **2. SITE STRUCTURE & NAVIGATION**
+* **Home:** Hero section with trending 2025 destinations, "Latest Guides" grid, and a "Quick Answers" section.
+* **Destinations (Cluster Strategy):**
+    * *North:* Spiti Valley, Ziro Valley, Kashmir Offbeat.
+    * *South:* Gokarna, Varkala, Wayanad (Weekend Getaways).
+* **Categories:** "Workations," "Budget Hacks," "Sustainable Travel," "Itineraries."
+* **Legal:** About, Contact, Privacy Policy, Disclaimer (Crucial for E-E-A-T trust).
+
+---
+
+## **3. CONTENT STRATEGY (The "24-Hour Rank" Formula)**
+* **Target Keywords:** Do NOT use generic terms. Focus on long-tail, high-intent queries:
+    * "Best hostels in Gokarna for workation 2025"
+    * "Ziro Valley music festival budget guide"
+    * "Weekend getaways from Bangalore within 300km"
+    * "Spiti Valley bike trip cost for couples"
+* **Volume:** Generate **50+ MDX Blog Posts**.
+* **Tone:** Highly personal, first-hand experience ("I visited...", "We found..."), authoritative, and concise.
+
+### **AEO & GEO Optimization (Crucial for Snippets)**
+Every blog post **MUST** follow this structure to trigger Featured Snippets:
+1.  **H1 Title:** Keyword-rich & catchy (e.g., "How to Plan a Budget Trip to Gokarna in 2025?").
+2.  **Direct Answer Block (The Snippet):** Immediately after the H1, provide a **40-60 word bold summary** answering the user's intent directly.
+3.  **Table of Contents:** Linked to H2/H3 headers.
+4.  **Structured Data:** `FAQPage` Schema and `Article` Schema embedded in every post.
+5.  **"People Also Ask" Section:** At the bottom, answer 3-5 related questions in Q&A format.
+
+---
+
+## **4. TECHNICAL SEO REQUIREMENTS**
+* **Dynamic Metadata:** Use Next.js `generateMetadata` API for dynamic Title Tags and Meta Descriptions based on MDX frontmatter.
+* **Canonical URLs:** Self-referencing canonicals to prevent duplicate content issues.
+* **Open Graph:** Auto-generate OG Images using `next/og` (Image Response) featuring the post title.
+* **Robots.txt & Sitemap:** Auto-generated `sitemap.xml` and `robots.txt` allowing full crawling.
+
+---
+
+## **5. VISUAL & UX REQUIREMENTS**
+* **Design:** Minimalist, "Medium.com" style readability. High contrast text (#1a202c) on white background.
+* **Components:**
+    * `AuthorBio`: Box with photo and "Travel Expert" credentials (boosts E-E-A-T).
+    * `ProsCons`: A styled component for reviews (e.g., "Pros of visiting in June").
+    * `ItineraryTimeline`: A vertical timeline component for trip plans.
+
+---
+
+## **6. FINAL INSTRUCTION**
+1.  Initialize the Next.js 15 project.
+2.  Set up the MDX content layer with the specified AEO structure.
+3.  **GENERATE THE CONTENT:** Create the 50 MDX files immediately using the keyword list above. Do not use placeholders. Write the actual content.
+4.  Ensure `npm run build` generates the sitemap and highly optimized static pages.
+5.  Output code that is ready to deploy to Vercel immediately.
+
+**GOAL:** The output must be a fully functional, content-rich blog that Googlebot can crawl, index, and understand instantly upon deployment.
