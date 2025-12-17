@@ -62,6 +62,45 @@ export default function Home() {
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
               <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400 w-6 h-6" />
+              
+              {searchTerm && (
+                <div className="absolute top-full left-0 right-0 mt-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden z-50 text-left max-h-[60vh] overflow-y-auto border border-gray-100 animate-in fade-in zoom-in-95 duration-200">
+                  {filteredPosts.length > 0 ? (
+                    <div className="p-2">
+                      <div className="text-xs font-bold text-muted-foreground px-4 py-2 uppercase tracking-wider">
+                        {filteredPosts.length} results found
+                      </div>
+                      {filteredPosts.map((post) => (
+                        <Link key={post.id} href={`/post/${post.slug}`}>
+                          <div className="flex items-start gap-4 p-3 rounded-xl hover:bg-black/5 transition-colors cursor-pointer group">
+                            <img 
+                              src={post.image} 
+                              alt={post.title} 
+                              className="w-16 h-16 rounded-lg object-cover flex-shrink-0"
+                            />
+                            <div>
+                              <h4 className="font-bold text-gray-900 group-hover:text-primary transition-colors line-clamp-2 leading-tight mb-1">
+                                {post.title}
+                              </h4>
+                              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                                <span className="bg-primary/10 text-primary px-1.5 py-0.5 rounded font-medium">
+                                  {post.category}
+                                </span>
+                                <span>•</span>
+                                <span>{post.readTime}</span>
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="p-8 text-center text-muted-foreground">
+                      <p>No guides found matching "{searchTerm}"</p>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </section>
