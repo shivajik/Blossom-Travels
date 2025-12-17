@@ -221,7 +221,7 @@ export default function Home() {
                         </div>
                         
                         <div>
-                          <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors duration-300">{cat}</h3>
+                          <h3 className="text-lg font-bold mb-1 text-white group-hover:text-primary transition-colors duration-300">{cat}</h3>
                           <p className="text-sm text-white/50 group-hover:text-white/80 transition-colors duration-300">
                             Explore guides
                           </p>
