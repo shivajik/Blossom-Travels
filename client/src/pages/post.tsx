@@ -7,7 +7,7 @@ import { ProsCons } from "@/components/ui/pros-cons";
 import { ItineraryTimeline } from "@/components/ui/itinerary-timeline";
 import { Button } from "@/components/ui/button";
 import NotFound from "@/pages/not-found";
-import { Calendar, Clock, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Calendar, Clock, ChevronRight, Share2, Facebook, Twitter, Linkedin, MapPin } from "lucide-react";
 
 export default function Post() {
   const [match, params] = useRoute("/post/:slug");
@@ -20,7 +20,110 @@ export default function Post() {
 
   // Mock content generation based on the post ID to make them distinct
   const renderContent = () => {
-    if (post.id === "1") { // Gokarna
+    if (post.id === "4") { // 50 Top Places
+        return (
+            <>
+                <p className="lead text-xl text-gray-700 mb-8">
+                    India is a land of staggering diversity. From the frozen summits of the Himalayas to the tropical greenery of Kerala, its borders encompass an incomparable range of landscapes, cultures, and people. Here are the 50 top tourist places in India you absolutely must visit in 2025.
+                </p>
+
+                <h2 className="text-3xl font-serif font-bold mt-12 mb-6 text-gray-900">North India: Mountains & History</h2>
+                
+                <h3 className="text-xl font-bold mt-8 mb-4 flex items-center gap-2"><MapPin className="text-primary w-5 h-5"/> 1. Leh-Ladakh, Jammu & Kashmir</h3>
+                <p>The land of high passes, crystal clear lakes like Pangong Tso, and ancient monasteries. A road trip here is the ultimate adventure.</p>
+                
+                <h3 className="text-xl font-bold mt-8 mb-4 flex items-center gap-2"><MapPin className="text-primary w-5 h-5"/> 2. Taj Mahal, Agra</h3>
+                <p>No list is complete without the symbol of love. Visit at sunrise to avoid the crowds and see the marble change colors.</p>
+
+                <h3 className="text-xl font-bold mt-8 mb-4 flex items-center gap-2"><MapPin className="text-primary w-5 h-5"/> 3. Varanasi, Uttar Pradesh</h3>
+                <p>One of the world's oldest living cities. The evening Ganga Aarti is a spiritual experience unlike any other.</p>
+
+                <h3 className="text-xl font-bold mt-8 mb-4 flex items-center gap-2"><MapPin className="text-primary w-5 h-5"/> 4. Jaipur, Rajasthan</h3>
+                <p>The Pink City offers the Hawa Mahal, Amer Fort, and vibrant bazaars. Don't miss the pyaz kachori at Rawat.</p>
+                
+                <h3 className="text-xl font-bold mt-8 mb-4 flex items-center gap-2"><MapPin className="text-primary w-5 h-5"/> 5. Rishikesh, Uttarakhand</h3>
+                <p>The Yoga Capital of the World and a hub for river rafting. Visit the Beatles Ashram for a slice of history.</p>
+
+                <div className="bg-slate-50 p-6 rounded-xl border border-slate-100 my-8">
+                   <h4 className="font-bold mb-4">Other Top North Indian Picks:</h4>
+                   <ul className="grid md:grid-cols-2 gap-2 list-disc pl-5">
+                       <li>6. Manali, Himachal Pradesh</li>
+                       <li>7. Kasol & Parvati Valley</li>
+                       <li>8. Udaipur (City of Lakes)</li>
+                       <li>9. Jaisalmer (Golden City)</li>
+                       <li>10. Amritsar (Golden Temple)</li>
+                       <li>11. Dharamshala & McLeodGanj</li>
+                       <li>12. Spiti Valley</li>
+                       <li>13. Valley of Flowers, Uttarakhand</li>
+                       <li>14. Gulmarg, Kashmir</li>
+                       <li>15. Jim Corbett National Park</li>
+                   </ul>
+                </div>
+
+                <h2 className="text-3xl font-serif font-bold mt-12 mb-6 text-gray-900">South India: Nature & Temples</h2>
+
+                <h3 className="text-xl font-bold mt-8 mb-4 flex items-center gap-2"><MapPin className="text-primary w-5 h-5"/> 16. Alleppey, Kerala</h3>
+                <p>Famous for its backwater houseboats. A night spent cruising the calm waters is pure therapy.</p>
+
+                <h3 className="text-xl font-bold mt-8 mb-4 flex items-center gap-2"><MapPin className="text-primary w-5 h-5"/> 17. Hampi, Karnataka</h3>
+                <p>A UNESCO World Heritage site with boulder-strewn landscapes and the magnificent ruins of the Vijayanagara Empire.</p>
+                
+                <h3 className="text-xl font-bold mt-8 mb-4 flex items-center gap-2"><MapPin className="text-primary w-5 h-5"/> 18. Pondicherry</h3>
+                <p>A slice of France in India. Explore the French Quarter, Promenade Beach, and Auroville.</p>
+
+                <div className="bg-slate-50 p-6 rounded-xl border border-slate-100 my-8">
+                   <h4 className="font-bold mb-4">More South Indian Gems:</h4>
+                   <ul className="grid md:grid-cols-2 gap-2 list-disc pl-5">
+                       <li>19. Munnar, Kerala (Tea Gardens)</li>
+                       <li>20. Coorg, Karnataka (Coffee)</li>
+                       <li>21. Gokarna (Beaches)</li>
+                       <li>22. Varkala (Cliff Beach)</li>
+                       <li>23. Ooty, Tamil Nadu</li>
+                       <li>24. Kodaikanal</li>
+                       <li>25. Mysore (Palace)</li>
+                       <li>26. Wayanad</li>
+                       <li>27. Mahabalipuram</li>
+                       <li>28. Madurai (Meenakshi Temple)</li>
+                   </ul>
+                </div>
+
+                <h2 className="text-3xl font-serif font-bold mt-12 mb-6 text-gray-900">East & Northeast: Untouched Beauty</h2>
+                 <ul className="space-y-4">
+                    <li><strong>29. Darjeeling, West Bengal:</strong> Ride the toy train and see Kanchenjunga.</li>
+                    <li><strong>30. Gangtok, Sikkim:</strong> Cleanest city, great food, and gateway to Nathu La.</li>
+                    <li><strong>31. Ziro Valley, Arunachal:</strong> Home to the Apatani tribe and the famous music festival.</li>
+                    <li><strong>32. Kaziranga, Assam:</strong> Spot the one-horned rhinoceros.</li>
+                    <li><strong>33. Shillong, Meghalaya:</strong> The Scotland of the East. Visit the root bridges in Cherrapunji.</li>
+                    <li><strong>34. Tawang, Arunachal:</strong> Visit the massive Tawang Monastery.</li>
+                    <li><strong>35. Kolkata, West Bengal:</strong> The cultural capital. Food, history, and tram rides.</li>
+                 </ul>
+
+                 <h2 className="text-3xl font-serif font-bold mt-12 mb-6 text-gray-900">West & Central India</h2>
+                 <ul className="space-y-4">
+                    <li><strong>36. Goa:</strong> Beaches, nightlife, and Portuguese heritage.</li>
+                    <li><strong>37. Mumbai:</strong> The city of dreams. Marine Drive, Colaba, and street food.</li>
+                    <li><strong>38. Ellora & Ajanta Caves:</strong> Ancient rock-cut caves in Maharashtra.</li>
+                    <li><strong>39. Rann of Kutch, Gujarat:</strong> The white salt desert festival (Rann Utsav).</li>
+                    <li><strong>40. Gir National Park:</strong> The only home of the Asiatic Lion.</li>
+                    <li><strong>41. Khajuraho, MP:</strong> Famous for its intricate erotic sculptures.</li>
+                    <li><strong>42. Kanha National Park:</strong> The inspiration for The Jungle Book.</li>
+                 </ul>
+
+                 <h2 className="text-3xl font-serif font-bold mt-12 mb-6 text-gray-900">Islands & Offbeat</h2>
+                 <ul className="space-y-4">
+                    <li><strong>43. Havelock Island, Andaman:</strong> Radhanagar Beach is one of Asia's best.</li>
+                    <li><strong>44. Lakshadweep:</strong> Prinstine coral reefs and blue lagoons.</li>
+                    <li><strong>45. Great Himalayan National Park:</strong> For serious trekkers.</li>
+                    <li><strong>46. Dzukou Valley, Nagaland:</strong> The valley of flowers of the Northeast.</li>
+                    <li><strong>47. Majuli, Assam:</strong> The world's largest river island.</li>
+                    <li><strong>48. Gandikota, Andhra Pradesh:</strong> The Grand Canyon of India.</li>
+                    <li><strong>49. Lonavala, Maharashtra:</strong> Perfect monsoon getaway.</li>
+                    <li><strong>50. Sundarbans, West Bengal:</strong> The largest mangrove forest.</li>
+                 </ul>
+
+            </>
+        )
+    } else if (post.id === "1") { // Gokarna
       return (
         <>
           <p>

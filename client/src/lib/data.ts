@@ -5,6 +5,7 @@ import spitiImg from "@assets/stock_images/spiti_valley_majesti_57ba6d9c.jpg";
 import gokarnaImg from "@assets/stock_images/gokarna_beach_cliff__ffce5080.jpg";
 import ziroImg from "@assets/stock_images/ziro_valley_green_ri_1d4e1193.jpg";
 import authorImg from "@assets/stock_images/traveler_writing_in__55b9860e.jpg";
+import tajMahalImg from "@assets/stock_images/taj_mahal_sunrise_ic_ec05b9d8.jpg";
 
 export const AUTHOR = {
   name: "Sarah Jenkins",
@@ -28,6 +29,23 @@ export type BlogPost = {
 };
 
 export const POSTS: BlogPost[] = [
+  {
+    id: "4",
+    slug: "50-top-tourist-places-india-2025",
+    title: "50 Top Tourist Places in India You Must Visit in 2025 (State-wise List)",
+    excerpt: "From the snow-capped peaks of the Himalayas to the backwaters of Kerala, here is the ultimate bucket list of 50+ destinations for every traveler.",
+    category: "Itineraries",
+    image: tajMahalImg,
+    date: "Jan 02, 2025",
+    readTime: "25 min read",
+    snippet: "The top tourist places in India for 2025 include the Taj Mahal (Agra), Jaipur (Rajasthan), Kerala Backwaters, and Goa beaches. For offbeat travel, consider Ziro Valley, Spiti, and Hampi. This comprehensive guide covers key attractions across all 28 states.",
+    relatedQuestions: [
+      { question: "Which is the No 1 tourist place in India?", answer: "The Taj Mahal in Agra remains the number one tourist attraction in India, drawing millions of international and domestic visitors annually." },
+      { question: "Which is the most beautiful state in India?", answer: "Kerala (God's Own Country) is often cited as the most beautiful state for its lush greenery and backwaters, while Kashmir is known as 'Paradise on Earth'." },
+      { question: "Best places to visit in India for couples?", answer: "Goa, Andaman Islands, Manali, Udaipur, and Alleppey are top choices for couples seeking romance and scenic beauty." }
+    ],
+    content: null
+  },
   {
     id: "1",
     slug: "best-hostels-gokarna-workation-2025",
