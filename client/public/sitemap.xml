@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Static Pages -->
+  <url>
+    <loc>https://blossom-travels.replit.app/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://blossom-travels.replit.app/explore</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blossom-travels.replit.app/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://blossom-travels.replit.app/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://blossom-travels.replit.app/privacy-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://blossom-travels.replit.app/terms-conditions</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://blossom-travels.replit.app/disclaimer</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Countries -->
+  <url><loc>https://blossom-travels.replit.app/country/United%20States</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Thailand</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Italy</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Spain</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/United%20Kingdom</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/United%20Arab%20Emirates</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/France</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Vietnam</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Australia</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Japan</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/New%20Zealand</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/India</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Mexico</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/T%C3%BCrkiye</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Portugal</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Poland</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Indonesia</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Netherlands</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Hungary</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Morocco</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Germany</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Egypt</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/Austria</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blossom-travels.replit.app/country/South%20Africa</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Categories -->
+  <url><loc>https://blossom-travels.replit.app/category/Beaches</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/category/Mountains</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/category/Historical%20Sites</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/category/City%20Breaks</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/category/Adventure</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/category/Food%20%26%20Drink</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/category/Wildlife</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/category/Road%20Trips</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/category/Islands</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/category/Festivals</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/category/Luxury</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/category/Budget%20Travel</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Blog Posts -->
+  <url><loc>https://blossom-travels.replit.app/post/50-top-tourist-places-india-2025</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/manali-winter-guide-2025</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/andaman-islands-scuba-diving-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/varanasi-spiritual-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/rann-utsav-kutch-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/best-hostels-gokarna-workation-2025</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/ziro-valley-music-festival-budget-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/spiti-valley-bike-trip-cost-couples</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/hostel-cooking-guide-save-money</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/overnight-bus-travel-india-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/street-food-safety-guide-india</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/sharing-cabs-taxis-india-apps</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/flight-booking-hacks-india-2025</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/packing-light-save-baggage-fees</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/camping-vs-hotels-india-cost</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/general-unreserved-train-travel-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/water-bottle-hack-save-plastic-money</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blossom-travels.replit.app/post/student-discounts-travel-india</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Tourist Places -->
+  <url><loc>https://blossom-travels.replit.app/place/1</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/2</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/3</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/4</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/5</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/6</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/7</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/8</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/9</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/10</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/11</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/12</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/13</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/14</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/15</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/16</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/17</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/18</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/19</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/20</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/21</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/22</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blossom-travels.replit.app/place/23</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+</urlset>
