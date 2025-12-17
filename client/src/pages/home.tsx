@@ -6,6 +6,7 @@ import { ArrowRight, MapPin, TrendingUp, Search, Laptop, Wallet, Leaf, Map, Came
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { TopDestinations } from "@/components/top-destinations";
+import { SEO } from "@/components/seo";
 
 const CATEGORY_ICONS: Record<string, React.ElementType> = {
   "Workations": Laptop,
@@ -28,6 +29,21 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col font-sans">
+      <SEO 
+        title="BlossomTravels - Detailed Travel Guides & Itineraries" 
+        description="Expert travel guides for Spiti, Gokarna, Ziro Valley, and more. Budget hacks, itineraries, and sustainable travel tips for the modern explorer."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "BlossomTravels",
+          "url": window.location.origin,
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": window.location.origin + "/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      />
       <Header />
       
       <main className="flex-1">

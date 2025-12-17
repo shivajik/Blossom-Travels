@@ -1,5 +1,5 @@
 import { useRoute, Link } from "wouter";
-import { POSTS } from "@/lib/data";
+import { POSTS, AUTHOR } from "@/lib/data";
 import { Header, Footer } from "@/components/layout";
 import { Snippet } from "@/components/ui/snippet";
 import { AuthorBio } from "@/components/ui/author-bio";
@@ -7,8 +7,10 @@ import { ProsCons } from "@/components/ui/pros-cons";
 import { ItineraryTimeline } from "@/components/ui/itinerary-timeline";
 import { AdPlaceholder } from "@/components/ui/ad-placeholder";
 import { Button } from "@/components/ui/button";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { SEO } from "@/components/seo";
 import NotFound from "@/pages/not-found";
-import { Calendar, Clock, ChevronRight, Share2, Facebook, Twitter, Linkedin, MapPin } from "lucide-react";
+import { Calendar, Clock, Share2, Facebook, Twitter, Linkedin, MapPin } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Post() {
@@ -35,6 +37,51 @@ export default function Post() {
 
   // Get related posts (same category, excluding current)
   const relatedPosts = POSTS.filter(p => p.category === post.category && p.id !== post.id).slice(0, 3);
+
+  // Schema.org JSON-LD for BlogPosting
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "image": [window.location.origin + post.image],
+    "datePublished": new Date(post.date).toISOString(), // Approximate conversion
+    "dateModified": new Date(post.date).toISOString(),
+    "author": [{
+        "@type": "Person",
+        "name": AUTHOR.name,
+        "url": window.location.origin + "/about" // Assuming author page or about page
+    }],
+    "publisher": {
+        "@type": "Organization",
+        "name": "BlossomTravels",
+        "logo": {
+            "@type": "ImageObject",
+            "url": window.location.origin + "/favicon.png"
+        }
+    },
+    "description": post.excerpt,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": window.location.origin + "/post/" + post.slug
+    }
+  };
+
+  // FAQ Schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": post.relatedQuestions.map(q => ({
+        "@type": "Question",
+        "name": q.question,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": q.answer
+        }
+    }))
+  };
+
+  // Combine schemas
+  const combinedSchema = [articleSchema, faqSchema];
 
   // Default content for generic posts (like the new budget hacks)
   const renderDefaultContent = () => (
@@ -273,6 +320,16 @@ export default function Post() {
 
   return (
     <div className="min-h-screen flex flex-col font-serif">
+      <SEO 
+        title={post.title}
+        description={post.excerpt}
+        image={post.image}
+        type="article"
+        publishedTime={new Date(post.date).toISOString()}
+        author={AUTHOR.name}
+        schema={combinedSchema}
+      />
+      
       {/* Reading Progress Bar */}
       <div className="fixed top-0 left-0 h-1 bg-primary z-[60]" style={{ width: `${scrollProgress}%` }} />
       
@@ -285,13 +342,12 @@ export default function Post() {
             {/* Main Content Area */}
             <div className="max-w-3xl mx-auto w-full">
                 {/* Breadcrumbs */}
-                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8 font-sans">
-                    <Link href="/">Home</Link>
-                    <ChevronRight className="w-3 h-3" />
-                    <Link href={`/category/${post.category.toLowerCase()}`}>{post.category}</Link>
-                    <ChevronRight className="w-3 h-3" />
-                    <span className="text-gray-900 font-medium truncate">{post.title}</span>
-                </div>
+                <Breadcrumbs 
+                  items={[
+                    { label: post.category, href: `/category/${post.category}` },
+                    { label: post.title }
+                  ]}
+                />
 
                 {/* Header */}
                 <div className="text-center mb-12">

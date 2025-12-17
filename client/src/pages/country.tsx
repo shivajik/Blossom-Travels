@@ -3,6 +3,8 @@ import { POSTS } from "@/lib/data";
 import { Header, Footer } from "@/components/layout";
 import { ArrowRight, MapPin, Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/seo";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 
 export default function Country() {
   const [match, params] = useRoute("/country/:name");
@@ -19,6 +21,11 @@ export default function Country() {
 
   return (
     <div className="min-h-screen flex flex-col font-sans">
+      <SEO 
+        title={`Travel Guide to ${countryName} - Best Places & Tips`}
+        description={`Explore the best travel guides, itineraries, and budget tips for visiting ${countryName}. Discover hidden gems and top tourist attractions.`}
+      />
+
       <Header />
       
       <main className="flex-1">
@@ -54,6 +61,13 @@ export default function Country() {
         {/* Guides List */}
         <section className="py-20 bg-slate-50">
           <div className="container mx-auto px-4">
+            <Breadcrumbs 
+              items={[
+                { label: "Destinations", href: "/explore" }, // Assuming explore is the destinations hub
+                { label: countryName }
+              ]}
+              className="mb-8"
+            />
             {countryPosts.length > 0 ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {countryPosts.map((post) => (
