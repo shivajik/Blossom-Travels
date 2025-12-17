@@ -201,7 +201,7 @@ export default function Post() {
                  <ul className="space-y-4">
                     <li><strong>36. Goa:</strong> Beaches, nightlife, and Portuguese heritage.</li>
                     <li><strong>37. Mumbai:</strong> The city of dreams. Marine Drive, Colaba, and street food.</li>
-                    <li><strong>38. Ellora & Ajanta Caves:</strong> Ancient rock-cut caves in Maharashtra.</li>
+                    <li><strong>38. <Link href="/post/ajanta-ellora-caves-aurangabad-travel-guide" className="text-primary hover:underline">Ellora & Ajanta Caves</Link>:</strong> Ancient rock-cut caves in Maharashtra.</li>
                     <li><strong>39. Rann of Kutch, Gujarat:</strong> The white salt desert festival (Rann Utsav).</li>
                     <li><strong>40. Gir National Park:</strong> The only home of the Asiatic Lion.</li>
                     <li><strong>41. Khajuraho, MP:</strong> Famous for its intricate erotic sculptures.</li>
@@ -369,6 +369,11 @@ export default function Post() {
 
                 <h3 className="text-xl font-bold mt-8 mb-4">Shirdi Sai Baba Temple</h3>
                 <p>Located about 110 km from Aurangabad, Shirdi is one of the holiest pilgrimage sites in India. Many travelers combine their Ajanta-Ellora trip with a visit to Shirdi.</p>
+
+                <div className="bg-slate-50 p-6 rounded-xl border border-slate-100 my-8">
+                    <h4 className="font-bold mb-4">Explore More in India</h4>
+                    <p className="mb-4">Maharashtra is just the beginning. Check out our comprehensive guide to <Link href="/post/50-top-tourist-places-india-2025" className="text-primary hover:underline font-medium">50 Top Tourist Places in India</Link> for more inspiration.</p>
+                </div>
 
                 <AdPlaceholder className="my-8" height="250px" label="Travel Package Ad" />
 
