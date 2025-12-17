@@ -15,6 +15,17 @@ export function Header() {
     { label: "About", href: "/about" },
   ];
 
+  const handleNavClick = (href: string) => {
+    if (href.startsWith("/#")) {
+      const id = href.split("#")[1];
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setIsOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -25,7 +36,11 @@ export function Header() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
+            <Link 
+              key={item.href} 
+              href={item.href} 
+              onClick={() => handleNavClick(item.href)}
+              className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
                 location === item.href ? "text-primary" : "text-muted-foreground"
               }`}>
               {item.label}
@@ -55,7 +70,11 @@ export function Header() {
         <div className="md:hidden border-t p-4 bg-background">
           <nav className="flex flex-col gap-4">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href} className="text-base font-medium text-muted-foreground hover:text-primary cursor-pointer" onClick={() => setIsOpen(false)}>
+              <Link 
+                key={item.href} 
+                href={item.href} 
+                className="text-base font-medium text-muted-foreground hover:text-primary cursor-pointer" 
+                onClick={() => handleNavClick(item.href)}>
                 {item.label}
               </Link>
             ))}
@@ -68,6 +87,16 @@ export function Header() {
 }
 
 export function Footer() {
+  const handleFooterClick = (href: string) => {
+    if (href.startsWith("/#")) {
+      const id = href.split("#")[1];
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <footer className="border-t bg-slate-50">
       <div className="container mx-auto px-4 py-12 md:py-16">
@@ -83,7 +112,15 @@ export function Footer() {
             <h4 className="font-bold mb-4">Explore</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link href="/explore" className="hover:text-primary cursor-pointer">All Guides</Link></li>
-              <li><Link href="/#destinations" className="hover:text-primary cursor-pointer">Destinations</Link></li>
+              <li>
+                <Link 
+                  href="/#destinations" 
+                  onClick={() => handleFooterClick("/#destinations")}
+                  className="hover:text-primary cursor-pointer"
+                >
+                  Destinations
+                </Link>
+              </li>
               <li><Link href="/category/itineraries" className="hover:text-primary cursor-pointer">Itineraries</Link></li>
               <li><Link href="/category/gear-reviews" className="hover:text-primary cursor-pointer">Gear Reviews</Link></li>
               <li><Link href="/category/budget-hacks" className="hover:text-primary cursor-pointer">Travel Hacks</Link></li>
