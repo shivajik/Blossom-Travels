@@ -33,6 +33,19 @@ import mysoreImg from "@assets/stock_images/mysore_palace_d069e50a.jpg";
 import rishikeshImg from "@assets/stock_images/rishikesh_river_raft_5146eb21.jpg";
 import goldenTempleImg from "@assets/stock_images/golden_temple_amrits_cac8eda4.jpg";
 
+// Worldwide Attractions Images
+import eiffelTowerImg from "@assets/stock_images/eiffel_tower_paris_4873ce6e.jpg";
+import colosseumImg from "@assets/stock_images/colosseum_rome_7f03dc6b.jpg";
+import statueOfLibertyImg from "@assets/stock_images/statue_of_liberty_ne_41072b60.jpg";
+import machuPicchuImg from "@assets/stock_images/machu_picchu_peru_054c6efb.jpg";
+import greatWallImg from "@assets/stock_images/great_wall_of_china_f45cc7c6.jpg";
+import sagradaFamiliaImg from "@assets/stock_images/sagrada_familia_barc_ff6f2931.jpg";
+import louvreImg from "@assets/stock_images/louvre_museum_paris_af435aea.jpg";
+import burjKhalifaImg from "@assets/stock_images/burj_khalifa_dubai_14c69d32.jpg";
+import petraImg from "@assets/stock_images/petra_jordan_09c0ab36.jpg";
+import grandCanyonImg from "@assets/stock_images/grand_canyon_usa_988474d3.jpg";
+import pyramidsImg from "@assets/stock_images/pyramids_of_giza_egy_18e81fca.jpg";
+
 
 export const AUTHOR = {
   name: "Sarah Jenkins",
@@ -628,5 +641,148 @@ export const TOURIST_PLACES: TouristPlace[] = [
     entryFee: "Free",
     timings: "Sunrise to Sunset",
     reviews: 4500
+  },
+  {
+    id: "13",
+    name: "Eiffel Tower",
+    country: "France",
+    location: "Paris, France",
+    image: eiffelTowerImg,
+    description: "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.",
+    rating: 4.8,
+    bestTime: "June to September",
+    entryFee: "€26.80 (Adults)",
+    timings: "9:30 AM - 11:45 PM",
+    reviews: 250000
+  },
+  {
+    id: "14",
+    name: "Colosseum",
+    country: "Italy",
+    location: "Rome, Italy",
+    image: colosseumImg,
+    description: "The Colosseum is an oval amphitheatre in the centre of the city of Rome, Italy. It is the largest ancient amphitheatre ever built, and is still the largest standing amphitheatre in the world today.",
+    rating: 4.7,
+    bestTime: "April to May, September to October",
+    entryFee: "€16 (Adults)",
+    timings: "8:30 AM - 7:00 PM",
+    reviews: 180000
+  },
+  {
+    id: "15",
+    name: "Statue of Liberty",
+    country: "USA",
+    location: "New York City, USA",
+    image: statueOfLibertyImg,
+    description: "The Statue of Liberty is a colossal neoclassical sculpture on Liberty Island in New York Harbor in New York City, in the United States.",
+    rating: 4.6,
+    bestTime: "April to June, September to November",
+    entryFee: "$24.80 (Adults)",
+    timings: "8:30 AM - 4:00 PM",
+    reviews: 150000
+  },
+  {
+    id: "16",
+    name: "Machu Picchu",
+    country: "Peru",
+    location: "Cusco Region, Peru",
+    image: machuPicchuImg,
+    description: "Machu Picchu is a 15th-century Inca citadel, located in the Eastern Cordillera of southern Peru, on a 2,430-metre mountain ridge.",
+    rating: 4.9,
+    bestTime: "May to October",
+    entryFee: "$45 (Adults)",
+    timings: "6:00 AM - 5:30 PM",
+    reviews: 90000
+  },
+  {
+    id: "17",
+    name: "Great Wall of China",
+    country: "China",
+    location: "Beijing, China",
+    image: greatWallImg,
+    description: "The Great Wall of China is a series of fortifications that were built across the historical northern borders of ancient Chinese states and Imperial China as protection against various nomadic groups.",
+    rating: 4.7,
+    bestTime: "September to October",
+    entryFee: "CNY 40 (Adults)",
+    timings: "7:30 AM - 5:30 PM",
+    reviews: 120000
+  },
+  {
+    id: "18",
+    name: "Sagrada Familia",
+    country: "Spain",
+    location: "Barcelona, Spain",
+    image: sagradaFamiliaImg,
+    description: "The Basílica de la Sagrada Família is a large unfinished Roman Catholic minor basilica in the Eixample district of Barcelona, Catalonia, Spain.",
+    rating: 4.8,
+    bestTime: "April to June, September to October",
+    entryFee: "€26 (Adults)",
+    timings: "9:00 AM - 6:00 PM",
+    reviews: 160000
+  },
+  {
+    id: "19",
+    name: "Louvre Museum",
+    country: "France",
+    location: "Paris, France",
+    image: louvreImg,
+    description: "The Louvre, or the Louvre Museum, is the world's most-visited museum and a historic monument in Paris, France.",
+    rating: 4.7,
+    bestTime: "October to March",
+    entryFee: "€17 (Adults)",
+    timings: "9:00 AM - 6:00 PM (Closed on Tuesdays)",
+    reviews: 200000
+  },
+  {
+    id: "20",
+    name: "Burj Khalifa",
+    country: "UAE",
+    location: "Dubai, UAE",
+    image: burjKhalifaImg,
+    description: "The Burj Khalifa is a skyscraper in Dubai, United Arab Emirates. It is the world's tallest building.",
+    rating: 4.7,
+    bestTime: "November to March",
+    entryFee: "AED 149 (Adults)",
+    timings: "8:30 AM - 11:00 PM",
+    reviews: 140000
+  },
+  {
+    id: "21",
+    name: "Petra",
+    country: "Jordan",
+    location: "Ma'an Governorate, Jordan",
+    image: petraImg,
+    description: "Petra is a historic and archaeological city in southern Jordan. Petra lies around Jabal Al-Madbah in a basin surrounded by mountains which form the eastern flank of the Arabah valley.",
+    rating: 4.9,
+    bestTime: "March to May, September to November",
+    entryFee: "JD 50 (1 Day)",
+    timings: "6:00 AM - 6:00 PM",
+    reviews: 60000
+  },
+  {
+    id: "22",
+    name: "Grand Canyon",
+    country: "USA",
+    location: "Arizona, USA",
+    image: grandCanyonImg,
+    description: "The Grand Canyon is a steep-sided canyon carved by the Colorado River in Arizona, United States. The Grand Canyon is 277 miles long, up to 18 miles wide and attains a depth of over a mile.",
+    rating: 4.8,
+    bestTime: "March to May, September to November",
+    entryFee: "$35 (Vehicle)",
+    timings: "24 Hours (South Rim)",
+    reviews: 110000
+  },
+  {
+    id: "23",
+    name: "Pyramids of Giza",
+    country: "Egypt",
+    location: "Giza, Egypt",
+    image: pyramidsImg,
+    description: "The Giza Pyramid Complex, also called the Giza Necropolis, is the site on the Giza Plateau in Greater Cairo, Egypt that includes the Great Pyramid of Giza, the Pyramid of Khafre, and the Pyramid of Menkaure.",
+    rating: 4.7,
+    bestTime: "October to April",
+    entryFee: "EGP 200 (Adults)",
+    timings: "8:00 AM - 5:00 PM",
+    reviews: 130000
   }
 ];
