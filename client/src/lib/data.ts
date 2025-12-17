@@ -6,6 +6,10 @@ import gokarnaImg from "@assets/stock_images/gokarna_beach_cliff__ffce5080.jpg";
 import ziroImg from "@assets/stock_images/ziro_valley_green_ri_1d4e1193.jpg";
 import authorImg from "@assets/stock_images/traveler_writing_in__55b9860e.jpg";
 import tajMahalImg from "@assets/stock_images/taj_mahal_sunrise_ic_ec05b9d8.jpg";
+import manaliImg from "@assets/stock_images/manali_snow_covered__59d7d053.jpg";
+import andamanImg from "@assets/stock_images/andaman_havelock_isl_53d032a2.jpg";
+import varanasiImg from "@assets/stock_images/varanasi_ganga_aarti_08a81441.jpg";
+import kutchImg from "@assets/stock_images/rann_of_kutch_white__143cf4c7.jpg";
 
 export const AUTHOR = {
   name: "Sarah Jenkins",
@@ -43,6 +47,74 @@ export const POSTS: BlogPost[] = [
       { question: "Which is the No 1 tourist place in India?", answer: "The Taj Mahal in Agra remains the number one tourist attraction in India, drawing millions of international and domestic visitors annually." },
       { question: "Which is the most beautiful state in India?", answer: "Kerala (God's Own Country) is often cited as the most beautiful state for its lush greenery and backwaters, while Kashmir is known as 'Paradise on Earth'." },
       { question: "Best places to visit in India for couples?", answer: "Goa, Andaman Islands, Manali, Udaipur, and Alleppey are top choices for couples seeking romance and scenic beauty." }
+    ],
+    content: null
+  },
+  {
+    id: "5",
+    slug: "manali-winter-guide-2025",
+    title: "Manali in Winter: A Complete Snow Guide (2025 Edition)",
+    excerpt: "Experience the magic of Manali covered in a blanket of snow. Best time to visit, snow activities in Solang Valley, and staying in an igloo.",
+    category: "Destinations",
+    image: manaliImg,
+    date: "Dec 20, 2024",
+    readTime: "10 min read",
+    snippet: "The best time to visit Manali for snowfall is from late December to February. Solang Valley offers skiing and paragliding, while Sethan Village (Hampta) provides unique igloo stays. Pack heavy woolens and waterproof boots.",
+    relatedQuestions: [
+      { question: "Is Manali open in December?", answer: "Yes, Manali is open and very popular in December for Christmas and New Year celebrations, though some high-altitude roads may be closed due to snow." },
+      { question: "How much does a trip to Manali cost?", answer: "A 4-day budget trip to Manali costs around ₹8,000 - ₹12,000 per person, including Volvo bus tickets from Delhi, budget stays, and food." },
+      { question: "Is driving to Manali safe in winter?", answer: "Driving can be risky due to black ice. It is recommended to hire experienced local drivers or take the Volvo bus if you are not accustomed to mountain driving." }
+    ],
+    content: null
+  },
+  {
+    id: "6",
+    slug: "andaman-islands-scuba-diving-guide",
+    title: "Andaman Islands: The Ultimate Scuba Diving & Beach Guide",
+    excerpt: "Dive into the turquoise waters of Havelock and Neil Island. A guide to the best beaches, scuba certification costs, and ferry bookings.",
+    category: "Sustainable Travel",
+    image: andamanImg,
+    date: "Jan 05, 2025",
+    readTime: "14 min read",
+    snippet: "Havelock Island (Swaraj Dweep) is the best place for scuba diving in India, specifically at Nemo Reef and The Wall. Radhanagar Beach is consistently ranked among Asia's best beaches for its pristine white sand and sunset views.",
+    relatedQuestions: [
+      { question: "Do Indians need a passport for Andaman?", answer: "No, Indian citizens do not need a passport to visit the Andaman & Nicobar Islands. A valid government ID like Aadhar or Voter ID is sufficient." },
+      { question: "Best time to visit Andaman?", answer: "October to May is the best time to visit Andaman as the weather is pleasant and seas are calm for water sports. Monsoons (June-Sept) can be unpredictable." },
+      { question: "Cost of scuba diving in Andaman?", answer: "A discovery scuba dive for beginners costs between ₹3,500 to ₹5,500. A PADI Open Water certification course costs around ₹25,000." }
+    ],
+    content: null
+  },
+  {
+    id: "7",
+    slug: "varanasi-spiritual-guide",
+    title: "Varanasi: A Spiritual Journey Through the Oldest Living City",
+    excerpt: "Witness the mesmerizing Ganga Aarti, explore the narrow lanes of Kashi, and understand the profound history of India's spiritual capital.",
+    category: "Culture",
+    image: varanasiImg,
+    date: "Nov 15, 2024",
+    readTime: "11 min read",
+    snippet: "Varanasi (Kashi) is best experienced by taking a sunrise boat ride on the Ganges and witnessing the evening Ganga Aarti at Dashashwamedh Ghat. Try the famous Blue Lassi and explore the weaving districts for Banarasi silk.",
+    relatedQuestions: [
+      { question: "Why is Varanasi famous?", answer: "Varanasi is considered the spiritual capital of India, famous for its Kashi Vishwanath Temple, the burning ghats (Manikarnika), and its ancient history dating back 3000 years." },
+      { question: "Is Varanasi safe for solo travelers?", answer: "Yes, Varanasi is generally safe, but the narrow lanes can be confusing. It is advisable to stay near the main ghats and be cautious of touts." },
+      { question: "What food is famous in Varanasi?", answer: "Don't miss the Kachori Sabzi for breakfast, Malaiyo (winter sweet), Tamatar Chaat, and the world-famous Banarasi Paan." }
+    ],
+    content: null
+  },
+  {
+    id: "8",
+    slug: "rann-utsav-kutch-guide",
+    title: "Rann of Kutch: A Guide to the White Desert Festival 2025",
+    excerpt: "Camping under the full moon on a salt desert. Everything you need to know about Rann Utsav bookings, permits, and cultural performances.",
+    category: "Festivals",
+    image: kutchImg,
+    date: "Dec 05, 2024",
+    readTime: "9 min read",
+    snippet: "Rann Utsav is a cultural festival held in the White Rann of Kutch, Gujarat. The best time to visit is during the full moon nights. Visitors need a permit to enter the salt desert, which can be obtained at the Bhirandiyara check post.",
+    relatedQuestions: [
+      { question: "When is Rann Utsav 2025?", answer: "Rann Utsav typically runs from November to February. The 2024-2025 edition dates are Nov 1st to Feb 28th." },
+      { question: "How to reach Rann of Kutch?", answer: "The nearest airport and railway station is Bhuj (80km away). From Bhuj, you can hire a taxi or take a bus to Dhordo, the tent city." },
+      { question: "Is Rann Utsav worth the cost?", answer: "While the official tent city is expensive, staying in nearby homestays in Hodka or Gorewali offers a more authentic and affordable experience." }
     ],
     content: null
   },
@@ -100,5 +172,5 @@ export const POSTS: BlogPost[] = [
 ];
 
 export const CATEGORIES = [
-  "Workations", "Budget Hacks", "Sustainable Travel", "Itineraries", "Gear Reviews"
+  "Workations", "Budget Hacks", "Sustainable Travel", "Itineraries", "Gear Reviews", "Destinations", "Culture", "Festivals"
 ];

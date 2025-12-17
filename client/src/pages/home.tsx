@@ -66,26 +66,32 @@ export default function Home() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              {['Spiti Valley', 'Gokarna', 'Ziro Valley'].map((place, i) => (
-                <div key={i} className="group relative overflow-hidden rounded-3xl aspect-[4/5] cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                  <img 
-                    src={POSTS[i + 1]?.image || POSTS[0].image} 
-                    alt={place}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
-                  <div className="absolute bottom-0 left-0 p-8 w-full">
-                    <div className="flex items-center gap-2 text-white/90 text-sm mb-3 font-medium bg-white/20 backdrop-blur w-fit px-3 py-1 rounded-full border border-white/10">
-                      <MapPin className="w-3 h-3" />
-                      India
+              {['spiti-valley-bike-trip-cost-couples', 'best-hostels-gokarna-workation-2025', 'ziro-valley-music-festival-budget-guide'].map((slug, i) => {
+                const post = POSTS.find(p => p.slug === slug);
+                const placeName = ['Spiti Valley', 'Gokarna', 'Ziro Valley'][i];
+                if (!post) return null;
+
+                return (
+                  <Link key={i} href={`/post/${slug}`} className="group relative overflow-hidden rounded-3xl aspect-[4/5] cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 block">
+                    <img 
+                      src={post.image} 
+                      alt={placeName}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute bottom-0 left-0 p-8 w-full">
+                      <div className="flex items-center gap-2 text-white/90 text-sm mb-3 font-medium bg-white/20 backdrop-blur w-fit px-3 py-1 rounded-full border border-white/10">
+                        <MapPin className="w-3 h-3" />
+                        India
+                      </div>
+                      <h3 className="text-4xl font-bold text-white font-serif mb-2">{placeName}</h3>
+                      <p className="text-white/70 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                        {post.excerpt}
+                      </p>
                     </div>
-                    <h3 className="text-4xl font-bold text-white font-serif mb-2">{place}</h3>
-                    <p className="text-white/70 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                      Discover the hidden gems of {place}. Detailed itineraries and budget tips inside.
-                    </p>
-                  </div>
-                </div>
-              ))}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>

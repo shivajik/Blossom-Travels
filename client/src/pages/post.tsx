@@ -123,6 +123,58 @@ export default function Post() {
 
             </>
         )
+    } else if (post.id === "5") { // Manali
+        return (
+            <>
+                <p>Manali in winter is a fairytale. The entire town is draped in white, and the crisp mountain air is exhilarating. However, visiting during peak winter (Jan-Feb) requires preparation.</p>
+                <h2>Solang Valley vs. Rohtang Pass</h2>
+                <p>In winter, Rohtang Pass is closed due to heavy snow. Solang Valley becomes the hub for all adventure activities like skiing, snowboarding, and paragliding.</p>
+                
+                <ProsCons 
+                    pros={["Guaranteed snow in Jan/Feb", "Skiing and snowboarding options", "Lower hotel rates (except New Year)"]}
+                    cons={["Road blocks due to heavy snow", "Extreme sub-zero temperatures", "Limited water availability in budget stays"]}
+                />
+
+                <h2>Where to Stay?</h2>
+                <p><strong>Old Manali:</strong> For backpacker vibes and cafes. <br/><strong>Sethan (Hampta):</strong> For igloo stays and offbeat snow treks.</p>
+            </>
+        );
+    } else if (post.id === "6") { // Andaman
+        return (
+            <>
+                <p>The Andaman Islands offer some of the clearest waters in the world. Havelock Island (Swaraj Dweep) is the crown jewel, hosting excellent dive sites and luxury resorts.</p>
+                <h2>Scuba Diving for Beginners</h2>
+                <p>You don't need to be a swimmer to try a 'Discovery Scuba Dive'. Instructors hold your hand the entire time. The best spots are Nemo Reef (shallow, great for photos) and The Wall (deeper, more marine life).</p>
+                
+                <ItineraryTimeline 
+                    items={[
+                        { day: "Day 1", title: "Arrival in Port Blair", description: "Visit Cellular Jail and watch the Light & Sound show." },
+                        { day: "Day 2", title: "Ferry to Havelock", description: "Take the Makruzz ferry. Rent a scooty and visit Radhanagar Beach for sunset." },
+                        { day: "Day 3", title: "Scuba Diving", description: "Morning dive at Nemo Reef. Afternoon chill at Kalapathar Beach." },
+                        { day: "Day 4", title: "Elephant Beach", description: "Boat ride to Elephant Beach for snorkeling and water sports." },
+                        { day: "Day 5", title: "Neil Island", description: "Short ferry to Neil. Visit the Natural Bridge and Laxmanpur Beach." }
+                    ]}
+                />
+            </>
+        );
+    } else if (post.id === "7") { // Varanasi
+        return (
+            <>
+                <p>Varanasi is an assault on the senses in the best way possible. It is chaos, color, and devotion all rolled into one.</p>
+                <h2>The Ghats</h2>
+                <p>Walking the ghats from Assi to Dashashwamedh is the best way to soak in the vibe. You will see sadhus, students, tourists, and pilgrims all sharing the same space.</p>
+                <p><strong>Food Recommendation:</strong> Try the Blue Lassi near Manikarnika Ghat. It is iconic.</p>
+            </>
+        );
+    } else if (post.id === "8") { // Kutch
+        return (
+            <>
+                <p>The Rann of Kutch is a seasonal salt marsh that turns into a surreal white desert in winter. The Rann Utsav adds luxury tents, cultural performances, and handicraft shopping to the mix.</p>
+                <h2>Full Moon Magic</h2>
+                <p>Try to book your trip during a full moon. The white salt reflects the moonlight, making the desert glow. It is an ethereal experience.</p>
+                <p><strong>Permits:</strong> You need a permit to enter the White Rann. It can be obtained online or at the Bhirandiyara check post (carry ID and photocopies).</p>
+            </>
+        );
     } else if (post.id === "1") { // Gokarna
       return (
         <>
