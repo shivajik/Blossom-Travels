@@ -46,6 +46,23 @@ import petraImg from "@assets/stock_images/petra_jordan_09c0ab36.jpg";
 import grandCanyonImg from "@assets/stock_images/grand_canyon_usa_988474d3.jpg";
 import pyramidsImg from "@assets/stock_images/pyramids_of_giza_egy_18e81fca.jpg";
 
+// New Post Images
+import jaipurImg from "@assets/stock_images/jaipur_pink_city_pal_cc94fc29.jpg";
+import baliImg from "@assets/stock_images/bali_rice_terrace_98e6d4d5.jpg";
+import tokyoImg from "@assets/stock_images/tokyo_shibuya_crossi_3685bb23.jpg";
+import nycImg from "@assets/stock_images/new_york_city_skylin_50e96e47.jpg";
+import londonImg from "@assets/stock_images/london_big_ben_55ae4a73.jpg";
+import romeImg from "@assets/stock_images/rome_trevi_fountain_8ee90cef.jpg";
+import sydneyImg from "@assets/stock_images/sydney_opera_house_8803fef7.jpg";
+import santoriniImg from "@assets/stock_images/santorini_greece_a738c69f.jpg";
+import kyotoImg from "@assets/stock_images/kyoto_bamboo_forest_8b14f933.jpg";
+import cappadociaImg from "@assets/stock_images/cappadocia_turkey_8f92f332.jpg";
+import maldivesImg from "@assets/stock_images/maldives_overwater_b_bf6c6a4a.jpg";
+import swissAlpsImg from "@assets/stock_images/swiss_alps_hiking_016159f8.jpg";
+import northernLightsImg from "@assets/stock_images/northern_lights_icel_893e8117.jpg";
+import safariImg from "@assets/stock_images/safari_south_africa_ef5f3191.jpg";
+import cherryBlossomsImg from "@assets/stock_images/cherry_blossoms_japa_587955b9.jpg";
+
 
 export const AUTHOR = {
   name: "Sarah Jenkins",
@@ -421,6 +438,196 @@ export const POSTS: BlogPost[] = [
         { question: "What is the age limit for student flights?", answer: "Most airlines offer student fares for ages 12-26. You must show a valid school/university ID at check-in." }
     ],
     content: null
+  },
+  {
+    id: "20",
+    slug: "bali-digital-nomad-guide",
+    title: "Living in Bali: The Ultimate Digital Nomad Guide 2025",
+    excerpt: "From visa rules to the best coworking cafes in Canggu and Ubud. Here is everything you need to know about moving to the Island of Gods.",
+    category: "Workations",
+    state: "Bali",
+    country: "Indonesia",
+    season: "All Year",
+    image: baliImg,
+    date: "Feb 12, 2025",
+    readTime: "15 min read",
+    snippet: "Bali remains the top destination for digital nomads. Canggu offers a vibrant community and surfing, while Ubud provides a more serene, jungle environment. Internet speeds have improved drastically with fiber optics available in most villas.",
+    relatedQuestions: [
+        { question: "What visa do I need for Bali?", answer: "Most nomads use the B211A Social Visa which allows a 60-day stay extendable up to 6 months. The new 'Second Home Visa' is also an option for wealthier applicants." },
+        { question: "Cost of living in Bali?", answer: "A comfortable lifestyle costs between $1,500 to $2,500 per month, including a private villa, scooter rental, and eating out daily." }
+    ],
+    content: null
+  },
+  {
+    id: "21",
+    slug: "cherry-blossom-forecast-japan-2025",
+    title: "Japan Cherry Blossom Forecast 2025: When & Where to Go",
+    excerpt: "Planning a trip for Sakura season? Check the latest forecast dates for Tokyo, Kyoto, and Osaka to catch the blooms at their peak.",
+    category: "Destinations",
+    state: "Tokyo",
+    country: "Japan",
+    season: "Spring",
+    image: cherryBlossomsImg,
+    date: "Jan 15, 2025",
+    readTime: "8 min read",
+    snippet: "The cherry blossom front (Sakura Zensen) typically starts in Okinawa in January and reaches Tokyo/Kyoto by late March. The full bloom (mankai) usually lasts only a week, so timing is crucial.",
+    relatedQuestions: [
+        { question: "When is the best time for Cherry Blossoms?", answer: "For Tokyo and Kyoto, the last week of March to the first week of April is usually the best time." },
+        { question: "Is Japan expensive during Sakura season?", answer: "Yes, accommodation prices can double. It is highly recommended to book hotels at least 3-4 months in advance." }
+    ],
+    content: null
+  },
+  {
+    id: "22",
+    slug: "safari-guide-south-africa-kruger",
+    title: "First Time Safari Guide: Kruger National Park on a Budget",
+    excerpt: "You don't need to spend thousands of dollars to see the Big 5. How to self-drive Kruger and stay in affordable rest camps.",
+    category: "Wildlife",
+    state: "Mpumalanga",
+    country: "South Africa",
+    season: "Winter",
+    image: safariImg,
+    date: "Feb 20, 2025",
+    readTime: "12 min read",
+    snippet: "Kruger National Park is one of the few safari destinations where you can self-drive in a standard hatchback. Staying in SANParks rest camps like Skukuza or Lower Sabie is far cheaper than private luxury lodges.",
+    relatedQuestions: [
+        { question: "Do I need a 4x4 for Kruger?", answer: "No, the main roads in Kruger are paved and the gravel roads are well-maintained. A standard sedan is sufficient for most tourist routes." },
+        { question: "Best time to visit Kruger?", answer: "The dry winter months (May to September) are best for game viewing as the grass is low and animals congregate around waterholes." }
+    ],
+    content: null
+  },
+  {
+    id: "23",
+    slug: "northern-lights-iceland-guide",
+    title: "Chasing the Aurora: A 5-Day Iceland Road Trip Itinerary",
+    excerpt: "The best spots to see the Northern Lights, rental car tips for winter driving, and how to photograph the Aurora Borealis.",
+    category: "Itineraries",
+    state: "Southern Region",
+    country: "Iceland",
+    season: "Winter",
+    image: northernLightsImg,
+    date: "Jan 30, 2025",
+    readTime: "10 min read",
+    snippet: "To see the Northern Lights, you need clear skies and high solar activity (KP index). The best time is from September to April. Renting a 4x4 with studded tires is essential for safety in winter.",
+    relatedQuestions: [
+        { question: "Can I see Northern Lights in Reykjavik?", answer: "It is possible if the aurora is strong, but light pollution makes it difficult. It's best to drive at least 30 mins out of the city." },
+        { question: "Is Iceland expensive?", answer: "Yes, Iceland is one of the most expensive countries. Cook your own meals and shop at Bonus supermarkets to save money." }
+    ],
+    content: null
+  },
+  {
+    id: "24",
+    slug: "swiss-alps-hiking-beginners",
+    title: "Hiking the Swiss Alps: Best Trails for Beginners",
+    excerpt: "Experience the breathtaking beauty of Switzerland on foot. Easy to moderate trails in Grindelwald, Zermatt, and Lauterbrunnen.",
+    category: "Adventure",
+    state: "Bernese Oberland",
+    country: "Switzerland",
+    season: "Summer",
+    image: swissAlpsImg,
+    date: "Feb 25, 2025",
+    readTime: "9 min read",
+    snippet: "The Panorama Trail in Männlichen and the Five Lakes Walk in Zermatt offer stunning views with minimal technical difficulty. Use the Swiss Travel Pass for unlimited access to trains, buses, and boats.",
+    relatedQuestions: [
+        { question: "Do I need a guide for hiking in Switzerland?", answer: "No, trails are extremely well-marked with yellow signs. You can easily hike independently." },
+        { question: "Best time for hiking?", answer: "July to September is the main hiking season when all trails are snow-free and cable cars are operating." }
+    ],
+    content: null
+  },
+  {
+    id: "25",
+    slug: "cappadocia-hot-air-balloon-guide",
+    title: "Cappadocia Hot Air Balloon: Is It Worth the Hype?",
+    excerpt: "Floating over fairy chimneys at sunrise. A complete guide to booking, costs, and safety for this bucket-list experience.",
+    category: "Adventure",
+    state: "Nevşehir",
+    country: "Türkiye",
+    season: "Spring",
+    image: cappadociaImg,
+    date: "Mar 05, 2025",
+    readTime: "7 min read",
+    snippet: "A hot air balloon ride in Cappadocia costs between €150 to €250 per person. Flights take off at sunrise and offer unparalleled views of the unique rock formations. Book in advance as they sell out quickly.",
+    relatedQuestions: [
+        { question: "Is hot air ballooning safe?", answer: "Yes, pilots are highly trained and flights are regulated by the Turkish Civil Aviation Authority. Flights are cancelled if wind conditions are not perfect." },
+        { question: "How many days should I stay in Cappadocia?", answer: "Stay at least 3 days to allow a buffer for balloon cancellations due to weather." }
+    ],
+    content: null
+  },
+  {
+    id: "26",
+    slug: "maldives-budget-travel-guide",
+    title: "Maldives on a Budget: Local Islands vs. Private Resorts",
+    excerpt: "Yes, you can visit the Maldives without spending a fortune. How to stay on local islands like Maafushi and Thoddoo.",
+    category: "Budget Hacks",
+    state: "Kaafu Atoll",
+    country: "Maldives",
+    season: "Winter",
+    image: maldivesImg,
+    date: "Feb 18, 2025",
+    readTime: "11 min read",
+    snippet: "Staying in guesthouses on local islands costs a fraction of private resorts ($50-$80/night). You can still do excursions like snorkeling with sharks, visiting sandbanks, and day trips to luxury resorts.",
+    relatedQuestions: [
+        { question: "Is alcohol allowed on local islands?", answer: "No, alcohol is strictly prohibited on local inhabited islands. It is only available on private resort islands or 'floating bar' boats." },
+        { question: "Can I wear a bikini on local islands?", answer: "Only on designated 'Bikini Beaches'. On other parts of the island, modest dress is required out of respect for local culture." }
+    ],
+    content: null
+  },
+  {
+    id: "27",
+    slug: "santorini-honeymoon-guide",
+    title: "The Ultimate Santorini Honeymoon Guide: Oia, Fira & Beyond",
+    excerpt: "Watching the world's most famous sunset. Best romantic hotels, caldera views, and wine tasting tours.",
+    category: "Luxury",
+    state: "South Aegean",
+    country: "Greece",
+    season: "Summer",
+    image: santoriniImg,
+    date: "Mar 10, 2025",
+    readTime: "10 min read",
+    snippet: "For the classic Santorini experience, stay in a cave hotel in Oia or Imerovigli. Rent an ATV to explore the Red Beach and the ancient ruins of Akrotiri. Don't miss a sunset dinner at Ammoudi Bay.",
+    relatedQuestions: [
+        { question: "Is Santorini too crowded?", answer: "In July and August, it is extremely crowded. Visit in May, June, or September for great weather and fewer crowds." },
+        { question: "How to get around Santorini?", answer: "The local bus system (KTEL) is cheap and reliable. For more freedom, rent an ATV or a small car." }
+    ],
+    content: null
+  },
+  {
+    id: "28",
+    slug: "nyc-first-time-visitor-guide",
+    title: "New York City: A 4-Day Itinerary for First Timers",
+    excerpt: "From Times Square to Central Park. How to navigate the subway, see a Broadway show, and eat the best pizza.",
+    category: "City Breaks",
+    state: "New York",
+    country: "United States",
+    season: "Autumn",
+    image: nycImg,
+    date: "Mar 15, 2025",
+    readTime: "14 min read",
+    snippet: "Walk the High Line, take the Staten Island Ferry for free views of the Statue of Liberty, and explore the distinct neighborhoods of Manhattan. Get a MetroCard for unlimited subway rides.",
+    relatedQuestions: [
+        { question: "Is NYC safe for tourists?", answer: "Yes, NYC is generally very safe for tourists. Exercise standard big-city precautions, especially on the subway late at night." },
+        { question: "Which pass is best for attractions?", answer: "The New York CityPASS or Go City Explorer Pass can save you up to 40% if you plan to visit multiple paid attractions like the Empire State Building and museums." }
+    ],
+    content: null
+  },
+  {
+    id: "29",
+    slug: "rome-food-guide-pasta-gelato",
+    title: "Eating Your Way Through Rome: Best Pasta, Pizza & Gelato",
+    excerpt: "Avoid tourist traps and eat like a Roman. Guide to Trastevere, Testaccio, and the best Carbonara in the city.",
+    category: "Food & Drink",
+    state: "Lazio",
+    country: "Italy",
+    season: "Spring",
+    image: romeImg,
+    date: "Mar 20, 2025",
+    readTime: "8 min read",
+    snippet: "Don't leave Rome without trying the four classic pastas: Carbonara, Cacio e Pepe, Amatriciana, and Gricia. For the best gelato, look for shops that keep their gelato in metal tins (pozzetti), not piled high.",
+    relatedQuestions: [
+        { question: "Do I need to tip in Rome?", answer: "Tipping is not mandatory in Italy as a 'coperto' (cover charge) is usually added. Leaving 1-2 Euros or rounding up is appreciated but not expected." },
+        { question: "What time is dinner in Rome?", answer: "Romans eat late. Dinner service typically starts at 7:30 PM, but restaurants get busy around 8:30 PM or 9:00 PM." }
+    ],
+    content: null
   }
 ];
 
@@ -784,5 +991,135 @@ export const TOURIST_PLACES: TouristPlace[] = [
     entryFee: "EGP 200 (Adults)",
     timings: "8:00 AM - 5:00 PM",
     reviews: 130000
+  },
+  {
+    id: "24",
+    name: "Jaipur City Palace",
+    country: "India",
+    location: "Jaipur, Rajasthan",
+    image: jaipurImg,
+    description: "The City Palace, Jaipur was established at the same time as the city of Jaipur, by Maharaja Sawai Jai Singh II, who moved his court to Jaipur from Amber, in 1727.",
+    rating: 4.6,
+    bestTime: "October to March",
+    entryFee: "₹300 (Indians), ₹700 (Foreigners)",
+    timings: "9:30 AM - 5:00 PM",
+    reviews: 45000
+  },
+  {
+    id: "25",
+    name: "Tegalalang Rice Terrace",
+    country: "Indonesia",
+    location: "Bali, Indonesia",
+    image: baliImg,
+    description: "The Tegalalang Rice Terrace in Ubud is famous for its beautiful scenes of rice paddies involving the subak (traditional Balinese cooperative irrigation system).",
+    rating: 4.7,
+    bestTime: "May to September",
+    entryFee: "IDR 15,000",
+    timings: "8:00 AM - 6:00 PM",
+    reviews: 60000
+  },
+  {
+    id: "26",
+    name: "Shibuya Crossing",
+    country: "Japan",
+    location: "Tokyo, Japan",
+    image: tokyoImg,
+    description: "Shibuya Crossing is a popular scramble crossing in Shibuya, Tokyo, Japan. It is often called 'the busiest pedestrian crossing in the world'.",
+    rating: 4.5,
+    bestTime: "All Year",
+    entryFee: "Free",
+    timings: "24 Hours",
+    reviews: 80000
+  },
+  {
+    id: "27",
+    name: "Empire State Building",
+    country: "USA",
+    location: "New York City, USA",
+    image: nycImg,
+    description: "The Empire State Building is a 102-story Art Deco skyscraper in Midtown Manhattan, New York City. It was the world's tallest building for nearly 40 years.",
+    rating: 4.7,
+    bestTime: "All Year",
+    entryFee: "$44 (Adults)",
+    timings: "10:00 AM - 12:00 AM",
+    reviews: 95000
+  },
+  {
+    id: "28",
+    name: "Big Ben",
+    country: "United Kingdom",
+    location: "London, UK",
+    image: londonImg,
+    description: "Big Ben is the nickname for the Great Bell of the striking clock at the north end of the Palace of Westminster in London, and is usually extended to refer to both the clock and the clock tower.",
+    rating: 4.6,
+    bestTime: "May to September",
+    entryFee: "Tours Only",
+    timings: "Exterior View 24/7",
+    reviews: 75000
+  },
+  {
+    id: "29",
+    name: "Trevi Fountain",
+    country: "Italy",
+    location: "Rome, Italy",
+    image: romeImg,
+    description: "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini.",
+    rating: 4.8,
+    bestTime: "Early Morning / Late Night",
+    entryFee: "Free",
+    timings: "24 Hours",
+    reviews: 110000
+  },
+  {
+    id: "30",
+    name: "Sydney Opera House",
+    country: "Australia",
+    location: "Sydney, Australia",
+    image: sydneyImg,
+    description: "The Sydney Opera House is a multi-venue performing arts centre at Sydney Harbour in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+    rating: 4.7,
+    bestTime: "September to November, March to May",
+    entryFee: "Tours from $43 AUD",
+    timings: "9:00 AM - 5:00 PM (Tours)",
+    reviews: 65000
+  },
+  {
+    id: "31",
+    name: "Oia",
+    country: "Greece",
+    location: "Santorini, Greece",
+    image: santoriniImg,
+    description: "Oia is a coastal town on the northwestern tip of Santorini, a Greek Aegean island. It is famous for its whitewashed houses carved into the rugged clifftops, and overlooks a vast caldera.",
+    rating: 4.9,
+    bestTime: "April to June, September to October",
+    entryFee: "Free",
+    timings: "24 Hours",
+    reviews: 55000
+  },
+  {
+    id: "32",
+    name: "Arashiyama Bamboo Grove",
+    country: "Japan",
+    location: "Kyoto, Japan",
+    image: kyotoImg,
+    description: "The Arashiyama Bamboo Grove is a natural forest of bamboo in Arashiyama, Kyoto, Japan. The forest consists mostly of Moso bamboo and consists of several pathways for tourists and visitors.",
+    rating: 4.6,
+    bestTime: "Spring and Autumn",
+    entryFee: "Free",
+    timings: "24 Hours",
+    reviews: 48000
+  },
+  {
+    id: "33",
+    name: "Fairy Chimneys",
+    country: "Türkiye",
+    location: "Cappadocia, Türkiye",
+    image: cappadociaImg,
+    description: "Cappadocia is famous for its unique rock formations and amazing hot air ballooning opportunities. The surreal landscapes are a result of volcanic eruptions and erosion.",
+    rating: 4.9,
+    bestTime: "April to June, September to November",
+    entryFee: "Varies by site",
+    timings: "Sunrise (Balloons)",
+    reviews: 70000
   }
 ];
