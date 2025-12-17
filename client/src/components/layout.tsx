@@ -81,19 +81,20 @@ export function Footer() {
           <div>
             <h4 className="font-bold mb-4">Explore</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary">Destinations</a></li>
-              <li><a href="#" className="hover:text-primary">Itineraries</a></li>
-              <li><a href="#" className="hover:text-primary">Gear Reviews</a></li>
-              <li><a href="#" className="hover:text-primary">Travel Hacks</a></li>
+              <li><Link href="/#destinations" className="hover:text-primary cursor-pointer">Destinations</Link></li>
+              <li><Link href="/category/itineraries" className="hover:text-primary cursor-pointer">Itineraries</Link></li>
+              <li><Link href="/category/gear-reviews" className="hover:text-primary cursor-pointer">Gear Reviews</Link></li>
+              <li><Link href="/category/budget-hacks" className="hover:text-primary cursor-pointer">Travel Hacks</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary">About Us</a></li>
-              <li><a href="#" className="hover:text-primary">Contact</a></li>
-              <li><a href="#" className="hover:text-primary">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-primary">Disclaimer</a></li>
+              <li><Link href="/about" className="hover:text-primary cursor-pointer">About Us</Link></li>
+              <li><Link href="/contact" className="hover:text-primary cursor-pointer">Contact</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-primary cursor-pointer">Privacy Policy</Link></li>
+              <li><Link href="/terms-conditions" className="hover:text-primary cursor-pointer">Terms & Conditions</Link></li>
+              <li><Link href="/disclaimer" className="hover:text-primary cursor-pointer">Disclaimer</Link></li>
             </ul>
           </div>
         </div>

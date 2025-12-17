@@ -8,6 +8,10 @@ import Home from "@/pages/home";
 import Post from "@/pages/post";
 import Category from "@/pages/category";
 import About from "@/pages/about";
+import Privacy from "@/pages/privacy";
+import Terms from "@/pages/terms";
+import Disclaimer from "@/pages/disclaimer";
+import Contact from "@/pages/contact";
 
 function Router() {
   return (
@@ -16,6 +20,10 @@ function Router() {
       <Route path="/post/:slug" component={Post} />
       <Route path="/category/:name" component={Category} />
       <Route path="/about" component={About} />
+      <Route path="/privacy-policy" component={Privacy} />
+      <Route path="/terms-conditions" component={Terms} />
+      <Route path="/disclaimer" component={Disclaimer} />
+      <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
   );
