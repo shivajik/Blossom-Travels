@@ -5,6 +5,7 @@ import { POSTS, CATEGORIES } from "@/lib/data";
 import { ArrowRight, MapPin, TrendingUp, Search, Laptop, Wallet, Leaf, Map, Camera, Globe, Landmark, Music } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { TopDestinations } from "@/components/top-destinations";
 
 const CATEGORY_ICONS: Record<string, React.ElementType> = {
   "Workations": Laptop,
@@ -234,6 +235,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Top Destinations Tabbed Section */}
+        <TopDestinations />
       </main>
 
       <Footer />
