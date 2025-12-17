@@ -2,8 +2,20 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Header, Footer } from "@/components/layout";
 import { POSTS, CATEGORIES } from "@/lib/data";
-import { ArrowRight, MapPin, TrendingUp, Search } from "lucide-react";
+import { ArrowRight, MapPin, TrendingUp, Search, Laptop, Wallet, Leaf, Map, Camera, Globe, Landmark, Music } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+
+const CATEGORY_ICONS: Record<string, React.ElementType> = {
+  "Workations": Laptop,
+  "Budget Hacks": Wallet,
+  "Sustainable Travel": Leaf,
+  "Itineraries": Map,
+  "Gear Reviews": Camera,
+  "Destinations": Globe,
+  "Culture": Landmark,
+  "Festivals": Music
+};
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -140,19 +152,46 @@ export default function Home() {
         </section>
 
         {/* Categories - Visual Upgrade */}
-        <section className="py-24 bg-slate-900 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-serif font-bold mb-12">Browse by Interest</h2>
-            <div className="flex flex-wrap justify-center gap-4">
-              {CATEGORIES.map((cat) => (
-                <Button 
-                  key={cat} 
-                  variant="outline" 
-                  className="rounded-full px-8 py-6 text-lg border-white/20 bg-white/5 text-white hover:bg-white hover:text-black hover:border-white transition-all duration-300"
-                >
-                  {cat}
-                </Button>
-              ))}
+        <section className="py-24 bg-slate-900 text-white overflow-hidden relative">
+          {/* Decorative background elements */}
+          <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl" />
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center mb-16">
+              <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2 block">Discover More</span>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Browse by Interest</h2>
+              <p className="text-xl text-white/60 max-w-2xl mx-auto">
+                Find exactly what you're looking for, from budget tips to cultural deep dives.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {CATEGORIES.map((cat) => {
+                const Icon = CATEGORY_ICONS[cat] || Search;
+                return (
+                  <Link key={cat} href={`/category/${cat}`}>
+                    <div className="group relative bg-white/5 border border-white/10 hover:border-primary/50 rounded-2xl p-6 h-full transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 cursor-pointer overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      
+                      <div className="relative flex flex-col items-center text-center gap-4">
+                        <div className="p-4 rounded-full bg-white/10 text-white group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                          <Icon className="w-8 h-8" />
+                        </div>
+                        
+                        <div>
+                          <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors duration-300">{cat}</h3>
+                          <p className="text-sm text-white/50 group-hover:text-white/80 transition-colors duration-300">
+                            Explore guides
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
