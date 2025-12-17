@@ -30,16 +30,19 @@ export default function Country() {
   if (!match) return null;
   
   // Decode the URL parameter correctly
-  const countryName = decodeURIComponent(params.name);
+  const countryName = decodeURIComponent(params.name).trim();
+  
+  // Normalize for comparison
+  const normalizedCountryName = countryName.toLowerCase();
   
   // Filter posts by country (case insensitive)
   const countryPosts = POSTS.filter(post => 
-    post.country?.toLowerCase() === countryName.toLowerCase()
+    post.country?.toLowerCase().trim() === normalizedCountryName
   );
 
   // Filter tourist places
   const countryTouristPlaces = TOURIST_PLACES.filter(place => 
-    place.country.toLowerCase() === countryName.toLowerCase()
+    place.country.toLowerCase().trim() === normalizedCountryName
   );
 
   // Get other countries for the carousel
