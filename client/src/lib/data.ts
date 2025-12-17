@@ -23,6 +23,16 @@ import localTrainImg from "@assets/stock_images/local_train_india_cr_747f9d5a.jp
 import waterBottleImg from "@assets/stock_images/travel_water_bottle__8fbac3b4.jpg";
 import studentIdImg from "@assets/stock_images/student_id_card_disc_01911b6f.jpg";
 
+// Tourist Places Images
+import keralaImg from "@assets/stock_images/kerala_backwaters_ho_66f26b81.jpg";
+import hawaMahalImg from "@assets/stock_images/jaipur_hawa_mahal_c03156ea.jpg";
+import pangongImg from "@assets/stock_images/ladakh_pangong_lake_d82d0e35.jpg";
+import munnarImg from "@assets/stock_images/munnar_tea_gardens_4fe6bfa6.jpg";
+import udaipurImg from "@assets/stock_images/udaipur_lake_palace_6f5ebe6e.jpg";
+import mysoreImg from "@assets/stock_images/mysore_palace_d069e50a.jpg";
+import rishikeshImg from "@assets/stock_images/rishikesh_river_raft_5146eb21.jpg";
+import goldenTempleImg from "@assets/stock_images/golden_temple_amrits_cac8eda4.jpg";
+
 
 export const AUTHOR = {
   name: "Sarah Jenkins",
@@ -446,4 +456,125 @@ export const STATES = [
 
 export const SEASONS = [
   "Winter", "Summer", "Monsoon", "Autumn", "All Year"
+];
+
+export interface TouristPlace {
+  id: string;
+  name: string;
+  country: string;
+  location: string;
+  image: string;
+  description: string;
+  rating: number;
+}
+
+export const TOURIST_PLACES: TouristPlace[] = [
+  {
+    id: "1",
+    name: "Taj Mahal",
+    country: "India",
+    location: "Agra, Uttar Pradesh",
+    image: tajMahalImg,
+    description: "An immense mausoleum of white marble, built in Agra between 1631 and 1648 by order of the Mughal emperor Shah Jahan in memory of his favourite wife.",
+    rating: 4.9
+  },
+  {
+    id: "2",
+    name: "Kerala Backwaters",
+    country: "India",
+    location: "Alleppey, Kerala",
+    image: keralaImg,
+    description: "A network of brackish lagoons and lakes lying parallel to the Arabian Sea coast (known as the Malabar Coast) of Kerala state in southern India.",
+    rating: 4.8
+  },
+  {
+    id: "3",
+    name: "Hawa Mahal",
+    country: "India",
+    location: "Jaipur, Rajasthan",
+    image: hawaMahalImg,
+    description: "The 'Palace of Winds' is a palace in Jaipur, India. It is constructed of red and pink sandstone and is famous for its unique honeycomb structure.",
+    rating: 4.6
+  },
+  {
+    id: "4",
+    name: "Pangong Lake",
+    country: "India",
+    location: "Ladakh",
+    image: pangongImg,
+    description: "An endorheic lake in the Himalayas situated at a height of about 4,350 m. It is 134 km long and extends from India to China.",
+    rating: 4.9
+  },
+  {
+    id: "5",
+    name: "Munnar Tea Gardens",
+    country: "India",
+    location: "Munnar, Kerala",
+    image: munnarImg,
+    description: "Munnar is a town and hill station in the Idukki district of the southwestern Indian state of Kerala. It is famous for its rolling hills of tea plantations.",
+    rating: 4.7
+  },
+  {
+    id: "6",
+    name: "Lake Palace",
+    country: "India",
+    location: "Udaipur, Rajasthan",
+    image: udaipurImg,
+    description: "A former summer palace of the royal dynasty of Mewar, now a luxury hotel. It is located on the island of Jag Niwas in Lake Pichola.",
+    rating: 4.8
+  },
+  {
+    id: "7",
+    name: "Mysore Palace",
+    country: "India",
+    location: "Mysore, Karnataka",
+    image: mysoreImg,
+    description: "A historical palace and a royal residence at Mysore in the Indian State of Karnataka. It is the official residence of the Wadiyar dynasty.",
+    rating: 4.7
+  },
+  {
+    id: "8",
+    name: "Rishikesh",
+    country: "India",
+    location: "Uttarakhand",
+    image: rishikeshImg,
+    description: "Known as the 'Yoga Capital of the World', it lies at the foothills of the Himalayas and is famous for river rafting and spiritual retreats.",
+    rating: 4.6
+  },
+  {
+    id: "9",
+    name: "Golden Temple",
+    country: "India",
+    location: "Amritsar, Punjab",
+    image: goldenTempleImg,
+    description: "The holiest Gurdwara of Sikhism, located in the city of Amritsar, Punjab, India. It is famous for its gilded dome and the sacred pool.",
+    rating: 4.9
+  },
+  {
+    id: "10",
+    name: "Varanasi Ghats",
+    country: "India",
+    location: "Varanasi, Uttar Pradesh",
+    image: varanasiImg,
+    description: "The riverfront steps leading to the banks of the River Ganges. The city has 88 ghats, most of which are used for bathing and puja ceremonies.",
+    rating: 4.8
+  },
+  {
+    id: "11",
+    name: "Solang Valley",
+    country: "India",
+    location: "Manali, Himachal Pradesh",
+    image: manaliImg,
+    description: "A side valley at the top of the Kullu Valley in Himachal Pradesh, known for its summer and winter sport conditions.",
+    rating: 4.5
+  },
+  {
+    id: "12",
+    name: "Radhanagar Beach",
+    country: "India",
+    location: "Havelock Island, Andaman",
+    image: andamanImg,
+    description: "Ranked as one of the best beaches in Asia, known for its pristine white sand and turquoise blue waters.",
+    rating: 4.9
+  }
 ];

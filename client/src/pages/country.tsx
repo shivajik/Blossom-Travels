@@ -1,13 +1,24 @@
 import { Link, useRoute } from "wouter";
-import { POSTS } from "@/lib/data";
+import { POSTS, TOURIST_PLACES } from "@/lib/data";
 import { Header, Footer } from "@/components/layout";
-import { ArrowRight, MapPin, Calendar, Clock } from "lucide-react";
+import { ArrowRight, MapPin, Calendar, Clock, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/seo";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { useState } from "react";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
 export default function Country() {
   const [match, params] = useRoute("/country/:name");
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 4;
   
   if (!match) return null;
   
@@ -18,6 +29,20 @@ export default function Country() {
   const countryPosts = POSTS.filter(post => 
     post.country?.toLowerCase() === countryName.toLowerCase()
   );
+
+  // Filter tourist places
+  const countryTouristPlaces = TOURIST_PLACES.filter(place => 
+    place.country.toLowerCase() === countryName.toLowerCase()
+  );
+
+  const totalPages = Math.ceil(countryTouristPlaces.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const currentPlaces = countryTouristPlaces.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    // Scroll to top of section logic if needed, but for now simple state change
+  };
 
   return (
     <div className="min-h-screen flex flex-col font-sans">
@@ -57,6 +82,92 @@ export default function Country() {
             </p>
           </div>
         </section>
+
+        {/* Tourist Places Section */}
+        {countryTouristPlaces.length > 0 && (
+          <section className="py-20 bg-white">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Must Visit</span>
+                <h2 className="text-4xl font-serif font-bold text-gray-900">Top Tourist Places in {countryName}</h2>
+                <div className="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                {currentPlaces.map((place) => (
+                  <div key={place.id} className="group relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col h-full border border-slate-100">
+                    <div className="aspect-[4/3] overflow-hidden relative">
+                      <img 
+                        src={place.image} 
+                        alt={place.name} 
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute top-3 right-3 bg-white/95 backdrop-blur px-2 py-1 rounded-md text-sm font-bold text-amber-500 shadow-sm flex items-center gap-1">
+                        <Star className="w-3.5 h-3.5 fill-current" />
+                        {place.rating}
+                      </div>
+                    </div>
+                    <div className="p-5 flex-1 flex flex-col">
+                      <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors">{place.name}</h3>
+                      <div className="flex items-center gap-1 text-slate-500 text-xs font-medium mb-3 uppercase tracking-wide">
+                        <MapPin className="w-3 h-3" />
+                        {place.location}
+                      </div>
+                      <p className="text-slate-600 text-sm leading-relaxed line-clamp-3 mb-4 flex-1">
+                        {place.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <Pagination>
+                  <PaginationContent>
+                    <PaginationItem>
+                      <PaginationPrevious 
+                        href="#" 
+                        onClick={(e) => {
+                          e.preventDefault();
+                          if (currentPage > 1) handlePageChange(currentPage - 1);
+                        }}
+                        className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                      />
+                    </PaginationItem>
+                    
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                      <PaginationItem key={page}>
+                        <PaginationLink 
+                          href="#" 
+                          isActive={page === currentPage}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handlePageChange(page);
+                          }}
+                        >
+                          {page}
+                        </PaginationLink>
+                      </PaginationItem>
+                    ))}
+
+                    <PaginationItem>
+                      <PaginationNext 
+                        href="#" 
+                        onClick={(e) => {
+                          e.preventDefault();
+                          if (currentPage < totalPages) handlePageChange(currentPage + 1);
+                        }}
+                        className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                      />
+                    </PaginationItem>
+                  </PaginationContent>
+                </Pagination>
+              )}
+            </div>
+          </section>
+        )}
 
         {/* Guides List */}
         <section className="py-20 bg-slate-50">
