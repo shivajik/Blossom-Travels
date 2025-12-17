@@ -5,27 +5,77 @@ import { Snippet } from "@/components/ui/snippet";
 import { AuthorBio } from "@/components/ui/author-bio";
 import { ProsCons } from "@/components/ui/pros-cons";
 import { ItineraryTimeline } from "@/components/ui/itinerary-timeline";
+import { AdPlaceholder } from "@/components/ui/ad-placeholder";
 import { Button } from "@/components/ui/button";
 import NotFound from "@/pages/not-found";
 import { Calendar, Clock, ChevronRight, Share2, Facebook, Twitter, Linkedin, MapPin } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function Post() {
   const [match, params] = useRoute("/post/:slug");
+  const [scrollProgress, setScrollProgress] = useState(0);
   
+  // Update reading progress bar
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      setScrollProgress(progress);
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   if (!match) return <NotFound />;
 
   const post = POSTS.find(p => p.slug === params.slug);
   
   if (!post) return <NotFound />;
 
+  // Get related posts (same category, excluding current)
+  const relatedPosts = POSTS.filter(p => p.category === post.category && p.id !== post.id).slice(0, 3);
+
+  // Default content for generic posts (like the new budget hacks)
+  const renderDefaultContent = () => (
+    <>
+      <p className="lead text-lg mb-6">
+        {post.excerpt}
+      </p>
+      <p>
+        Travel doesn't have to be expensive. In this guide, we break down actionable tips to help you save money without compromising on the experience. Whether you are a student, a solo backpacker, or just looking to stretch your rupee further, these hacks are tested in the field.
+      </p>
+      
+      <AdPlaceholder className="my-8" height="250px" label="In-Article Ad" />
+
+      <h2>Why This Matters</h2>
+      <p>
+        Most travelers overspend on three things: Accommodation, Transport, and Food. By optimizing these three pillars, you can extend your trip duration by 2x or 3x.
+      </p>
+
+      <h2>Top Tips for {post.category}</h2>
+      <ul className="list-disc pl-6 space-y-2 mb-6">
+        <li><strong>Plan Ahead:</strong> Last-minute bookings are the enemy of budget travel.</li>
+        <li><strong>Live Like a Local:</strong> Eat where locals eat, take public transport.</li>
+        <li><strong>Travel Slow:</strong> Staying in one place longer reduces transport costs and often gets you long-stay discounts.</li>
+      </ul>
+
+      <p>
+        Implement these strategies on your next trip and watch your savings grow. Remember, every rupee saved is a rupee you can spend on your next adventure.
+      </p>
+    </>
+  );
+
   // Mock content generation based on the post ID to make them distinct
   const renderContent = () => {
     if (post.id === "4") { // 50 Top Places
         return (
             <>
-                <p className="lead text-xl text-gray-700 mb-8">
+                <p className="lead text-xl text-gray-700 mb-8 drop-cap">
                     India is a land of staggering diversity. From the frozen summits of the Himalayas to the tropical greenery of Kerala, its borders encompass an incomparable range of landscapes, cultures, and people. Here are the 50 top tourist places in India you absolutely must visit in 2025.
                 </p>
+
+                <AdPlaceholder className="my-8" height="90px" label="Top Banner Ad" />
 
                 <h2 className="text-3xl font-serif font-bold mt-12 mb-6 text-gray-900">North India: Mountains & History</h2>
                 
@@ -37,6 +87,8 @@ export default function Post() {
 
                 <h3 className="text-xl font-bold mt-8 mb-4 flex items-center gap-2"><MapPin className="text-primary w-5 h-5"/> 3. Varanasi, Uttar Pradesh</h3>
                 <p>One of the world's oldest living cities. The evening Ganga Aarti is a spiritual experience unlike any other.</p>
+
+                <AdPlaceholder className="my-8" height="250px" label="Mid-Content Ad" />
 
                 <h3 className="text-xl font-bold mt-8 mb-4 flex items-center gap-2"><MapPin className="text-primary w-5 h-5"/> 4. Jaipur, Rajasthan</h3>
                 <p>The Pink City offers the Hawa Mahal, Amer Fort, and vibrant bazaars. Don't miss the pyaz kachori at Rawat.</p>
@@ -127,6 +179,7 @@ export default function Post() {
         return (
             <>
                 <p>Manali in winter is a fairytale. The entire town is draped in white, and the crisp mountain air is exhilarating. However, visiting during peak winter (Jan-Feb) requires preparation.</p>
+                <AdPlaceholder className="my-8" height="90px" />
                 <h2>Solang Valley vs. Rohtang Pass</h2>
                 <p>In winter, Rohtang Pass is closed due to heavy snow. Solang Valley becomes the hub for all adventure activities like skiing, snowboarding, and paragliding.</p>
                 
@@ -146,6 +199,8 @@ export default function Post() {
                 <h2>Scuba Diving for Beginners</h2>
                 <p>You don't need to be a swimmer to try a 'Discovery Scuba Dive'. Instructors hold your hand the entire time. The best spots are Nemo Reef (shallow, great for photos) and The Wall (deeper, more marine life).</p>
                 
+                <AdPlaceholder className="my-8" height="250px" />
+
                 <ItineraryTimeline 
                     items={[
                         { day: "Day 1", title: "Arrival in Port Blair", description: "Visit Cellular Jail and watch the Light & Sound show." },
@@ -155,24 +210,6 @@ export default function Post() {
                         { day: "Day 5", title: "Neil Island", description: "Short ferry to Neil. Visit the Natural Bridge and Laxmanpur Beach." }
                     ]}
                 />
-            </>
-        );
-    } else if (post.id === "7") { // Varanasi
-        return (
-            <>
-                <p>Varanasi is an assault on the senses in the best way possible. It is chaos, color, and devotion all rolled into one.</p>
-                <h2>The Ghats</h2>
-                <p>Walking the ghats from Assi to Dashashwamedh is the best way to soak in the vibe. You will see sadhus, students, tourists, and pilgrims all sharing the same space.</p>
-                <p><strong>Food Recommendation:</strong> Try the Blue Lassi near Manikarnika Ghat. It is iconic.</p>
-            </>
-        );
-    } else if (post.id === "8") { // Kutch
-        return (
-            <>
-                <p>The Rann of Kutch is a seasonal salt marsh that turns into a surreal white desert in winter. The Rann Utsav adds luxury tents, cultural performances, and handicraft shopping to the mix.</p>
-                <h2>Full Moon Magic</h2>
-                <p>Try to book your trip during a full moon. The white salt reflects the moonlight, making the desert glow. It is an ethereal experience.</p>
-                <p><strong>Permits:</strong> You need a permit to enter the White Rann. It can be obtained online or at the Bhirandiyara check post (carry ID and photocopies).</p>
             </>
         );
     } else if (post.id === "1") { // Gokarna
@@ -191,6 +228,8 @@ export default function Post() {
              pros={["Dedicated AC coworking space", "Starlink WiFi (150 Mbps)", "Amazing sunset views"]}
              cons={["Expensive private rooms", "Steep climb to reach the property"]}
           />
+
+          <AdPlaceholder className="my-8" height="250px" />
 
           <h2>2. Trippr Gokarna (Budget Choice)</h2>
           <p>
@@ -215,128 +254,147 @@ export default function Post() {
              ]}
            />
 
+           <AdPlaceholder className="my-8" height="250px" />
+
            <h2>Cost Breakdown</h2>
            <p>
              Fuel in the mountains burns faster. Expect mileage of 25kmpl on a Himalayan. Accommodation in homestays averages ₹1200 per night with meals.
            </p>
         </>
       );
+    } else if (["2", "7", "8", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"].includes(post.id)) {
+        // Return default content for all other posts (including new budget hacks)
+        return renderDefaultContent();
     } else {
-      return (
-        <>
-          <p>
-            Ziro Valley is famous for its music festival, but it's also a cultural gem of Arunachal Pradesh. Planning a trip here requires some logistics, especially regarding permits.
-          </p>
-          <h2>Getting the ILP</h2>
-          <p>
-            The Inner Line Permit can be applied for online at the Arunachal eILP portal. It costs ₹100 and takes about 2-3 days to process.
-          </p>
-          <p>
-            Camping is the best way to experience the festival. Official campsites charge around ₹3000 for the duration, but bringing your own tent (BYOT) is much cheaper.
-          </p>
-        </>
-      );
+        // Fallback
+      return renderDefaultContent();
     }
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col font-serif">
+      {/* Reading Progress Bar */}
+      <div className="fixed top-0 left-0 h-1 bg-primary z-[60]" style={{ width: `${scrollProgress}%` }} />
+      
       <Header />
       
       <main className="flex-1 bg-white">
-        <article className="max-w-4xl mx-auto px-4 py-12 md:py-20">
-          {/* Breadcrumbs */}
-          <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-            <Link href="/">Home</Link>
-            <ChevronRight className="w-3 h-3" />
-            <Link href={`/category/${post.category.toLowerCase()}`}>{post.category}</Link>
-            <ChevronRight className="w-3 h-3" />
-            <span className="text-gray-900 font-medium truncate">{post.title}</span>
-          </div>
+        <article className="max-w-7xl mx-auto px-4 py-12 md:py-20">
+          
+          <div className="grid lg:grid-cols-[1fr_300px] gap-16">
+            {/* Main Content Area */}
+            <div className="max-w-3xl mx-auto w-full">
+                {/* Breadcrumbs */}
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8 font-sans">
+                    <Link href="/">Home</Link>
+                    <ChevronRight className="w-3 h-3" />
+                    <Link href={`/category/${post.category.toLowerCase()}`}>{post.category}</Link>
+                    <ChevronRight className="w-3 h-3" />
+                    <span className="text-gray-900 font-medium truncate">{post.title}</span>
+                </div>
 
-          {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground mb-6">
-              <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> {post.date}</span>
-              <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {post.readTime}</span>
-            </div>
-            <h1 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 leading-tight mb-8">
-              {post.title}
-            </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
-              {post.excerpt}
-            </p>
-          </div>
-
-          {/* Featured Image */}
-          <div className="aspect-video w-full rounded-2xl overflow-hidden mb-12 shadow-lg">
-            <img 
-              src={post.image} 
-              alt={post.title} 
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="grid md:grid-cols-[1fr_300px] gap-12">
-            {/* Main Content */}
-            <div className="prose prose-lg prose-slate max-w-none">
-              {/* AEO Snippet */}
-              <Snippet>
-                {post.snippet}
-              </Snippet>
-
-              {/* Table of Contents (Simulated) */}
-              <div className="bg-slate-50 p-6 rounded-lg my-8 border border-slate-100">
-                <p className="font-bold text-gray-900 mb-4 uppercase text-sm tracking-wide">Table of Contents</p>
-                <ul className="space-y-2 text-sm !m-0 !pl-0 !list-none">
-                  <li><a href="#" className="text-primary hover:underline">1. Quick Overview</a></li>
-                  <li><a href="#" className="text-slate-600 hover:text-primary transition-colors">2. Detailed Breakdown</a></li>
-                  <li><a href="#" className="text-slate-600 hover:text-primary transition-colors">3. Expert Tips</a></li>
-                  <li><a href="#" className="text-slate-600 hover:text-primary transition-colors">4. FAQ</a></li>
-                </ul>
-              </div>
-
-              {renderContent()}
-
-              <AuthorBio />
-
-              {/* FAQ Schema Section */}
-              <section className="mt-16 pt-10 border-t">
-                <h3 className="text-2xl font-serif font-bold mb-8">People Also Ask</h3>
-                <div className="space-y-6">
-                  {post.relatedQuestions.map((qa, i) => (
-                    <div key={i} className="bg-slate-50 p-6 rounded-xl">
-                      <h4 className="font-bold text-gray-900 mb-2 text-base">{qa.question}</h4>
-                      <p className="text-gray-600 text-base mb-0">{qa.answer}</p>
+                {/* Header */}
+                <div className="text-center mb-12">
+                    <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground mb-6 font-sans">
+                    <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> {post.date}</span>
+                    <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {post.readTime}</span>
                     </div>
-                  ))}
+                    <h1 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 leading-tight mb-8">
+                    {post.title}
+                    </h1>
+                    <p className="text-xl text-gray-600 leading-relaxed font-sans">
+                    {post.excerpt}
+                    </p>
                 </div>
-              </section>
+
+                {/* Featured Image */}
+                <div className="aspect-video w-full rounded-2xl overflow-hidden mb-12 shadow-lg">
+                    <img 
+                    src={post.image} 
+                    alt={post.title} 
+                    className="w-full h-full object-cover"
+                    />
+                </div>
+
+                <div className="prose prose-lg prose-slate max-w-none font-serif">
+                    {/* AEO Snippet */}
+                    <Snippet>
+                        {post.snippet}
+                    </Snippet>
+
+                    {/* Table of Contents (Simulated) */}
+                    <div className="bg-slate-50 p-6 rounded-lg my-8 border border-slate-100 font-sans not-prose">
+                        <p className="font-bold text-gray-900 mb-4 uppercase text-sm tracking-wide">Table of Contents</p>
+                        <ul className="space-y-2 text-sm">
+                            <li><a href="#" className="text-primary hover:underline block py-1 border-b border-dashed border-gray-200">1. Quick Overview</a></li>
+                            <li><a href="#" className="text-slate-600 hover:text-primary transition-colors block py-1 border-b border-dashed border-gray-200">2. Detailed Breakdown</a></li>
+                            <li><a href="#" className="text-slate-600 hover:text-primary transition-colors block py-1 border-b border-dashed border-gray-200">3. Expert Tips</a></li>
+                            <li><a href="#" className="text-slate-600 hover:text-primary transition-colors block py-1">4. FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    {renderContent()}
+
+                    <AuthorBio />
+
+                    {/* FAQ Schema Section */}
+                    <section className="mt-16 pt-10 border-t font-sans">
+                        <h3 className="text-2xl font-serif font-bold mb-8">People Also Ask</h3>
+                        <div className="space-y-6">
+                        {post.relatedQuestions.map((qa, i) => (
+                            <div key={i} className="bg-slate-50 p-6 rounded-xl">
+                            <h4 className="font-bold text-gray-900 mb-2 text-base">{qa.question}</h4>
+                            <p className="text-gray-600 text-base mb-0">{qa.answer}</p>
+                            </div>
+                        ))}
+                        </div>
+                    </section>
+                </div>
             </div>
 
-            {/* Sidebar */}
-            <aside className="hidden md:block space-y-8">
-              <div className="sticky top-24">
-                <div className="bg-white border rounded-xl p-6 shadow-sm mb-8">
-                  <h4 className="font-bold mb-4">Share this guide</h4>
-                  <div className="flex gap-2">
-                    <Button variant="outline" size="icon" className="rounded-full"><Facebook className="w-4 h-4" /></Button>
-                    <Button variant="outline" size="icon" className="rounded-full"><Twitter className="w-4 h-4" /></Button>
-                    <Button variant="outline" size="icon" className="rounded-full"><Linkedin className="w-4 h-4" /></Button>
-                    <Button variant="outline" size="icon" className="rounded-full"><Share2 className="w-4 h-4" /></Button>
-                  </div>
-                </div>
+            {/* Sidebar - Sticky */}
+            <aside className="hidden lg:block space-y-8 h-fit sticky top-24 font-sans">
+              <AdPlaceholder height="300px" label="Sidebar Ad" />
 
-                <div className="bg-primary/5 border border-primary/10 rounded-xl p-6">
-                  <h4 className="font-bold font-serif text-lg mb-2">Plan your trip</h4>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Need help planning your {post.category} trip? Download our free checklist.
-                  </p>
-                  <Button className="w-full">Download PDF</Button>
+              <div className="bg-white border rounded-xl p-6 shadow-sm mb-8">
+                <h4 className="font-bold mb-4">Share this guide</h4>
+                <div className="flex gap-2">
+                  <Button variant="outline" size="icon" className="rounded-full"><Facebook className="w-4 h-4" /></Button>
+                  <Button variant="outline" size="icon" className="rounded-full"><Twitter className="w-4 h-4" /></Button>
+                  <Button variant="outline" size="icon" className="rounded-full"><Linkedin className="w-4 h-4" /></Button>
+                  <Button variant="outline" size="icon" className="rounded-full"><Share2 className="w-4 h-4" /></Button>
                 </div>
               </div>
+
+              <div className="bg-primary/5 border border-primary/10 rounded-xl p-6">
+                <h4 className="font-bold font-serif text-lg mb-2">Plan your trip</h4>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Need help planning your {post.category} trip? Download our free checklist.
+                </p>
+                <Button className="w-full">Download PDF</Button>
+              </div>
+              
+              <AdPlaceholder height="600px" label="Sticky Sidebar Ad" />
             </aside>
           </div>
+          
+          {/* Related Posts Section */}
+          {relatedPosts.length > 0 && (
+            <div className="mt-20 pt-12 border-t font-sans">
+                <h2 className="text-3xl font-serif font-bold mb-10 text-center">More from {post.category}</h2>
+                <div className="grid md:grid-cols-3 gap-8">
+                    {relatedPosts.map(p => (
+                        <Link key={p.id} href={`/post/${p.slug}`} className="group cursor-pointer">
+                            <div className="rounded-xl overflow-hidden mb-4 aspect-video">
+                                <img src={p.image} alt={p.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
+                            </div>
+                            <h3 className="font-bold text-lg leading-tight group-hover:text-primary transition-colors">{p.title}</h3>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+          )}
+          
         </article>
       </main>
 

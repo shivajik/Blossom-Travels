@@ -11,6 +11,19 @@ import andamanImg from "@assets/stock_images/andaman_havelock_isl_53d032a2.jpg";
 import varanasiImg from "@assets/stock_images/varanasi_ganga_aarti_08a81441.jpg";
 import kutchImg from "@assets/stock_images/rann_of_kutch_white__143cf4c7.jpg";
 
+// Budget Hacks Images
+import hostelImg from "@assets/stock_images/backpacker_cooking_h_dc9bd562.jpg";
+import busImg from "@assets/stock_images/overnight_sleeper_bu_6fa57be0.jpg";
+import streetFoodImg from "@assets/stock_images/street_food_india_ma_71c65109.jpg";
+import sharingTaxiImg from "@assets/stock_images/group_of_travelers_s_9aee52fb.jpg";
+import flightDealsImg from "@assets/stock_images/booking_flight_ticke_34a68ed0.jpg";
+import packingImg from "@assets/stock_images/packing_light_backpa_37cb592f.jpg";
+import campingImg from "@assets/stock_images/camping_tent_nature__b7783c0a.jpg";
+import localTrainImg from "@assets/stock_images/local_train_india_cr_747f9d5a.jpg";
+import waterBottleImg from "@assets/stock_images/travel_water_bottle__8fbac3b4.jpg";
+import studentIdImg from "@assets/stock_images/student_id_card_disc_01911b6f.jpg";
+
+
 export const AUTHOR = {
   name: "Sarah Jenkins",
   role: "Senior Travel Editor",
@@ -33,6 +46,7 @@ export type BlogPost = {
 };
 
 export const POSTS: BlogPost[] = [
+  // ... Existing posts (id 1-8)
   {
     id: "4",
     slug: "50-top-tourist-places-india-2025",
@@ -166,6 +180,168 @@ export const POSTS: BlogPost[] = [
       { question: "Is it safe for couples in Spiti?", answer: "Spiti is extremely safe for couples. The locals are hospitable and crime is virtually non-existent." },
       { question: "Best time for bike trip to Spiti?", answer: "June to September is the ideal window when all roads including Kunzum Pass are open and snow is cleared." },
       { question: "Can we rent bikes in Kaza?", answer: "It is better to rent bikes in Manali or Shimla as options in Kaza are limited and often less maintained." }
+    ],
+    content: null
+  },
+
+  // 10 NEW BUDGET HACKS
+  {
+    id: "10",
+    slug: "hostel-cooking-guide-save-money",
+    title: "How to Cook in Hostels: Save ₹500/Day on Food",
+    excerpt: "Stop eating out for every meal. Here are 5 one-pot recipes you can make in any hostel kitchen for under ₹100.",
+    category: "Budget Hacks",
+    image: hostelImg,
+    date: "Feb 10, 2025",
+    readTime: "7 min read",
+    snippet: "Cooking your own breakfast and dinner in hostel kitchens can save you up to ₹15,000 per month on long trips. Essential items to carry include a small spice kit, instant oats, and reusable containers.",
+    relatedQuestions: [
+        { question: "Do hostels provide free food?", answer: "Most hostels offer free breakfast (toast/eggs), but lunch and dinner are usually paid. Using the communal kitchen is free." },
+        { question: "What should I cook in a hostel?", answer: "Pasta, oatmeal, egg bhurji, and one-pot rice dishes are easiest as they require minimal utensils and cleanup." }
+    ],
+    content: null
+  },
+  {
+    id: "11",
+    slug: "overnight-bus-travel-india-guide",
+    title: "Mastering Overnight Buses in India: Sleep Better & Pay Less",
+    excerpt: "Volvo vs. Scania vs. Non-AC Sleeper. Which one is worth the money? Plus, how to pick the safest seat.",
+    category: "Budget Hacks",
+    image: busImg,
+    date: "Feb 08, 2025",
+    readTime: "9 min read",
+    snippet: "Overnight sleeper buses save you the cost of a hotel room for one night. Always book a 'lower berth' in the middle of the bus for the least bumps. Apps like RedBus often offer cheaper rates than offline agents.",
+    relatedQuestions: [
+        { question: "Is it safe to travel by bus at night in India?", answer: "Yes, reputable operators like Zingbus and IntrCity are safe and offer GPS tracking. Avoid unbranded local buses for long overnight journeys." },
+        { question: "Which seat is best in a sleeper bus?", answer: "Lower berths are more stable than upper berths. Avoid the last row (bumpy) and the first row (headlight glare/horn noise)." }
+    ],
+    content: null
+  },
+  {
+    id: "12",
+    slug: "street-food-safety-guide-india",
+    title: "Eat Street Food Without Getting Sick: The Iron Stomach Guide",
+    excerpt: "Don't let 'Delhi Belly' ruin your trip. Learn how to identify safe stalls, what to avoid, and the rule of 'Peel it, Boil it, or Leave it'.",
+    category: "Budget Hacks",
+    image: streetFoodImg,
+    date: "Feb 05, 2025",
+    readTime: "8 min read",
+    snippet: "To eat street food safely, choose stalls with high turnover (fresh food), avoid tap water and raw chutneys, and stick to hot, cooked-in-front-of-you dishes like aloo tikki or dosa.",
+    relatedQuestions: [
+        { question: "Is street food cheaper than restaurants?", answer: "Yes, street food costs 1/5th the price of a restaurant meal. A filling meal can cost as little as ₹50-₹80." },
+        { question: "What medicine to carry for food poisoning?", answer: "Carry ORS, probiotics, and activated charcoal. Consult a doctor before taking antibiotics." }
+    ],
+    content: null
+  },
+  {
+    id: "13",
+    slug: "sharing-cabs-taxis-india-apps",
+    title: "Taxi Cost Splitting: Apps & Tricks to Travel for Cheap",
+    excerpt: "How to use BlaBlaCar, find travel buddies on Instagram, and split costs for expensive routes like Manali-Leh.",
+    category: "Budget Hacks",
+    image: sharingTaxiImg,
+    date: "Feb 01, 2025",
+    readTime: "6 min read",
+    snippet: "Sharing a taxi can reduce travel costs by 75%. Use BlaBlaCar for intercity rides or join destination-specific WhatsApp/Facebook groups to find fellow travelers to split cab fares.",
+    relatedQuestions: [
+        { question: "Is BlaBlaCar safe in India?", answer: "Generally yes, as profiles are verified. Always check reviews and ratings before booking a ride." },
+        { question: "How to find people to share cabs?", answer: "Check hostel notice boards or search for 'Travel Partners [Destination]' groups on Facebook." }
+    ],
+    content: null
+  },
+  {
+    id: "14",
+    slug: "flight-booking-hacks-india-2025",
+    title: "Secret Flight Booking Hacks: Save ₹2000 on Every Ticket",
+    excerpt: "Incognito mode is a myth. Here is what actually works: VPN tricks, student discounts, and the 'Goldilocks Window'.",
+    category: "Budget Hacks",
+    image: flightDealsImg,
+    date: "Jan 28, 2025",
+    readTime: "10 min read",
+    snippet: "Book domestic flights 3-4 weeks in advance for the best rates. Use Skyscanner's 'Whole Month' view to find the cheapest dates. Booking directly on the airline website often saves convenience fees.",
+    relatedQuestions: [
+        { question: "Does incognito mode lower flight prices?", answer: "No, this is largely a myth. Prices are determined by demand and yield management algorithms, not your cookies." },
+        { question: "Which day is cheapest to fly?", answer: "Mid-week flights (Tuesday/Wednesday) are typically cheaper than weekends." }
+    ],
+    content: null
+  },
+  {
+    id: "15",
+    slug: "packing-light-save-baggage-fees",
+    title: "One Bag Travel: Avoid Excess Baggage Fees Forever",
+    excerpt: "How to pack for a 2-week trip in a 40L backpack. The art of layering and choosing multi-purpose clothing.",
+    category: "Budget Hacks",
+    image: packingImg,
+    date: "Jan 25, 2025",
+    readTime: "8 min read",
+    snippet: "Travel with carry-on only to save time and money. Wear your heaviest items (jacket/boots) on the flight. Use packing cubes to compress clothes and organize your bag.",
+    relatedQuestions: [
+        { question: "What is the cabin baggage limit in India?", answer: "Most domestic airlines allow 7kg cabin baggage. Some budget fares (like Indigo Saver) may charge for cabin bags, so check the fine print." },
+        { question: "Can I carry a laptop bag extra?", answer: "Yes, most airlines allow one laptop bag/handbag in addition to your 7kg cabin luggage." }
+    ],
+    content: null
+  },
+  {
+    id: "16",
+    slug: "camping-vs-hotels-india-cost",
+    title: "Camping vs. Hotels: When Does It Actually Save Money?",
+    excerpt: "Camping isn't always cheaper. We break down the costs of buying gear vs. renting spots vs. budget hotels.",
+    category: "Budget Hacks",
+    image: campingImg,
+    date: "Jan 20, 2025",
+    readTime: "9 min read",
+    snippet: "BYOT (Bring Your Own Tent) saves money only on long trips (7+ days). For short trips, renting a tent or staying in a hostel dorm is often cheaper and less hassle than carrying gear.",
+    relatedQuestions: [
+        { question: "Is wild camping legal in India?", answer: "It varies by state. In Himachal and Ladakh, it is generally tolerated away from settlements. In National Parks, it is strictly illegal." },
+        { question: "How much does a good tent cost?", answer: "A decent 2-person trekking tent (Quechua) costs around ₹3,000 - ₹5,000." }
+    ],
+    content: null
+  },
+  {
+    id: "17",
+    slug: "general-unreserved-train-travel-guide",
+    title: "The Unreserved General Class Guide: Extreme Budget Travel",
+    excerpt: "Traveling across India for ₹500? It's possible if you dare to take the General Class. Survival tips inside.",
+    category: "Budget Hacks",
+    image: localTrainImg,
+    date: "Jan 15, 2025",
+    readTime: "11 min read",
+    snippet: "General class tickets are 1/5th the price of Sleeper. To survive, board from the starting station to get a seat, carry plenty of water, and avoid traveling during major festivals like Diwali/Chhath.",
+    relatedQuestions: [
+        { question: "Can I upgrade my general ticket?", answer: "Yes, you can approach the TTE and pay the difference + penalty to upgrade to Sleeper/AC if berths are available." },
+        { question: "Is general class safe for solo women?", answer: "It can be extremely crowded and uncomfortable. It is generally recommended to opt for Sleeper or Ladies Coupe instead." }
+    ],
+    content: null
+  },
+  {
+    id: "18",
+    slug: "water-bottle-hack-save-plastic-money",
+    title: "Stop Buying Water: Save ₹3000/Month and the Planet",
+    excerpt: "Bottled water adds up fast. Why you need a filtered bottle or how to find free RO water stations across India.",
+    category: "Budget Hacks",
+    image: waterBottleImg,
+    date: "Jan 10, 2025",
+    readTime: "5 min read",
+    snippet: "Carrying a filtered water bottle (like Lifestraw or Brita) allows you to drink tap water safely. Alternatively, fill up at Railway RO stations where 1L costs just ₹5.",
+    relatedQuestions: [
+        { question: "Is railway station water safe?", answer: "The RO water from designated 'Water Vending Machines' on platforms is safe and chilled. Avoid tap water from washrooms." },
+        { question: "How much plastic do I save?", answer: "A traveler drinks 3 bottles a day. Switching to reusable saves ~90 plastic bottles a month." }
+    ],
+    content: null
+  },
+  {
+    id: "19",
+    slug: "student-discounts-travel-india",
+    title: "The Power of a Student ID: Discounts You Didn't Know Existed",
+    excerpt: "From monuments to flight tickets, your college ID is a goldmine. Here is where you can use it.",
+    category: "Budget Hacks",
+    image: studentIdImg,
+    date: "Jan 08, 2025",
+    readTime: "6 min read",
+    snippet: "A valid Student ID gets you huge discounts (up to 90%) on entry tickets to ASI monuments (Taj Mahal, Qutub Minar). Airlines like Indigo and Air India also offer 'Student Fares' with extra baggage allowance.",
+    relatedQuestions: [
+        { question: "Does ISIC card work in India?", answer: "Yes, the International Student Identity Card (ISIC) is accepted at many tourist sites and for Microsoft/Adobe software discounts." },
+        { question: "What is the age limit for student flights?", answer: "Most airlines offer student fares for ages 12-26. You must show a valid school/university ID at check-in." }
     ],
     content: null
   }
