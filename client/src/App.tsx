@@ -12,11 +12,13 @@ import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
 import Disclaimer from "@/pages/disclaimer";
 import Contact from "@/pages/contact";
+import Explore from "@/pages/explore";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/explore" component={Explore} />
       <Route path="/post/:slug" component={Post} />
       <Route path="/category/:name" component={Category} />
       <Route path="/about" component={About} />

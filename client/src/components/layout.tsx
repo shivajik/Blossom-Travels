@@ -8,6 +8,7 @@ export function Header() {
   const [location] = useLocation();
 
   const navItems = [
+    { label: "Explore", href: "/explore" },
     { label: "Destinations", href: "/#destinations" },
     { label: "Workations", href: "/category/workations" },
     { label: "Budget Hacks", href: "/category/budget-hacks" },
@@ -81,6 +82,7 @@ export function Footer() {
           <div>
             <h4 className="font-bold mb-4">Explore</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><Link href="/explore" className="hover:text-primary cursor-pointer">All Guides</Link></li>
               <li><Link href="/#destinations" className="hover:text-primary cursor-pointer">Destinations</Link></li>
               <li><Link href="/category/itineraries" className="hover:text-primary cursor-pointer">Itineraries</Link></li>
               <li><Link href="/category/gear-reviews" className="hover:text-primary cursor-pointer">Gear Reviews</Link></li>

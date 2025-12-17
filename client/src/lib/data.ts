@@ -37,22 +37,25 @@ export type BlogPost = {
   title: string;
   excerpt: string;
   category: string;
+  state?: string; // New field
+  season?: string; // New field
   image: string;
   date: string;
   readTime: string;
-  snippet: string; // The AEO Direct Answer
-  content: React.ReactNode; // Using React Node for "MDX" simulation
+  snippet: string;
+  content: React.ReactNode; 
   relatedQuestions: { question: string; answer: string }[];
 };
 
 export const POSTS: BlogPost[] = [
-  // ... Existing posts (id 1-8)
   {
     id: "4",
     slug: "50-top-tourist-places-india-2025",
     title: "50 Top Tourist Places in India You Must Visit in 2025 (State-wise List)",
     excerpt: "From the snow-capped peaks of the Himalayas to the backwaters of Kerala, here is the ultimate bucket list of 50+ destinations for every traveler.",
     category: "Itineraries",
+    state: "India",
+    season: "All Year",
     image: tajMahalImg,
     date: "Jan 02, 2025",
     readTime: "25 min read",
@@ -70,6 +73,8 @@ export const POSTS: BlogPost[] = [
     title: "Manali in Winter: A Complete Snow Guide (2025 Edition)",
     excerpt: "Experience the magic of Manali covered in a blanket of snow. Best time to visit, snow activities in Solang Valley, and staying in an igloo.",
     category: "Destinations",
+    state: "Himachal Pradesh",
+    season: "Winter",
     image: manaliImg,
     date: "Dec 20, 2024",
     readTime: "10 min read",
@@ -87,6 +92,8 @@ export const POSTS: BlogPost[] = [
     title: "Andaman Islands: The Ultimate Scuba Diving & Beach Guide",
     excerpt: "Dive into the turquoise waters of Havelock and Neil Island. A guide to the best beaches, scuba certification costs, and ferry bookings.",
     category: "Sustainable Travel",
+    state: "Andaman & Nicobar",
+    season: "Winter",
     image: andamanImg,
     date: "Jan 05, 2025",
     readTime: "14 min read",
@@ -104,6 +111,8 @@ export const POSTS: BlogPost[] = [
     title: "Varanasi: A Spiritual Journey Through the Oldest Living City",
     excerpt: "Witness the mesmerizing Ganga Aarti, explore the narrow lanes of Kashi, and understand the profound history of India's spiritual capital.",
     category: "Culture",
+    state: "Uttar Pradesh",
+    season: "Winter",
     image: varanasiImg,
     date: "Nov 15, 2024",
     readTime: "11 min read",
@@ -121,6 +130,8 @@ export const POSTS: BlogPost[] = [
     title: "Rann of Kutch: A Guide to the White Desert Festival 2025",
     excerpt: "Camping under the full moon on a salt desert. Everything you need to know about Rann Utsav bookings, permits, and cultural performances.",
     category: "Festivals",
+    state: "Gujarat",
+    season: "Winter",
     image: kutchImg,
     date: "Dec 05, 2024",
     readTime: "9 min read",
@@ -138,6 +149,8 @@ export const POSTS: BlogPost[] = [
     title: "Best Hostels in Gokarna for Workation 2025: WiFi Speed & Vibe Check",
     excerpt: "Looking for the perfect spot to work from the beach? We tested WiFi speeds and power backup at the top 10 hostels in Gokarna.",
     category: "Workations",
+    state: "Karnataka",
+    season: "Winter",
     image: gokarnaImg,
     date: "Dec 15, 2024",
     readTime: "8 min read",
@@ -147,7 +160,7 @@ export const POSTS: BlogPost[] = [
       { question: "Which beach is best for staying in Gokarna?", answer: "Kudle Beach is best for accessibility and cafes, while Om Beach offers better views. For peace and quiet, choose Paradise or Half Moon Beach." },
       { question: "How much does a workation in Gokarna cost?", answer: "A monthly workation in Gokarna costs between ₹15,000 to ₹35,000 ($180-$420) depending on your accommodation choice and dining habits." }
     ],
-    content: null // Will be populated in the component for simplicity
+    content: null 
   },
   {
     id: "2",
@@ -155,6 +168,8 @@ export const POSTS: BlogPost[] = [
     title: "Ziro Valley Music Festival Budget Guide: Total Cost Breakdown",
     excerpt: "Planning for Ziro 2025? Here is exactly how much you need to save, from inner line permits to tent camping costs.",
     category: "Budget Hacks",
+    state: "Arunachal Pradesh",
+    season: "Autumn",
     image: ziroImg,
     date: "Nov 28, 2024",
     readTime: "12 min read",
@@ -172,6 +187,8 @@ export const POSTS: BlogPost[] = [
     title: "Spiti Valley Bike Trip Cost for Couples: 10-Day Itinerary",
     excerpt: "The ultimate guide to riding through the middle land. Fuel costs, bike rentals in Manali, and homestay prices for two.",
     category: "Itineraries",
+    state: "Himachal Pradesh",
+    season: "Summer",
     image: spitiImg,
     date: "Oct 10, 2024",
     readTime: "15 min read",
@@ -183,14 +200,14 @@ export const POSTS: BlogPost[] = [
     ],
     content: null
   },
-
-  // 10 NEW BUDGET HACKS
   {
     id: "10",
     slug: "hostel-cooking-guide-save-money",
     title: "How to Cook in Hostels: Save ₹500/Day on Food",
     excerpt: "Stop eating out for every meal. Here are 5 one-pot recipes you can make in any hostel kitchen for under ₹100.",
     category: "Budget Hacks",
+    state: "India",
+    season: "All Year",
     image: hostelImg,
     date: "Feb 10, 2025",
     readTime: "7 min read",
@@ -207,6 +224,8 @@ export const POSTS: BlogPost[] = [
     title: "Mastering Overnight Buses in India: Sleep Better & Pay Less",
     excerpt: "Volvo vs. Scania vs. Non-AC Sleeper. Which one is worth the money? Plus, how to pick the safest seat.",
     category: "Budget Hacks",
+    state: "India",
+    season: "All Year",
     image: busImg,
     date: "Feb 08, 2025",
     readTime: "9 min read",
@@ -223,6 +242,8 @@ export const POSTS: BlogPost[] = [
     title: "Eat Street Food Without Getting Sick: The Iron Stomach Guide",
     excerpt: "Don't let 'Delhi Belly' ruin your trip. Learn how to identify safe stalls, what to avoid, and the rule of 'Peel it, Boil it, or Leave it'.",
     category: "Budget Hacks",
+    state: "India",
+    season: "All Year",
     image: streetFoodImg,
     date: "Feb 05, 2025",
     readTime: "8 min read",
@@ -239,6 +260,8 @@ export const POSTS: BlogPost[] = [
     title: "Taxi Cost Splitting: Apps & Tricks to Travel for Cheap",
     excerpt: "How to use BlaBlaCar, find travel buddies on Instagram, and split costs for expensive routes like Manali-Leh.",
     category: "Budget Hacks",
+    state: "India",
+    season: "All Year",
     image: sharingTaxiImg,
     date: "Feb 01, 2025",
     readTime: "6 min read",
@@ -255,6 +278,8 @@ export const POSTS: BlogPost[] = [
     title: "Secret Flight Booking Hacks: Save ₹2000 on Every Ticket",
     excerpt: "Incognito mode is a myth. Here is what actually works: VPN tricks, student discounts, and the 'Goldilocks Window'.",
     category: "Budget Hacks",
+    state: "India",
+    season: "All Year",
     image: flightDealsImg,
     date: "Jan 28, 2025",
     readTime: "10 min read",
@@ -271,6 +296,8 @@ export const POSTS: BlogPost[] = [
     title: "One Bag Travel: Avoid Excess Baggage Fees Forever",
     excerpt: "How to pack for a 2-week trip in a 40L backpack. The art of layering and choosing multi-purpose clothing.",
     category: "Budget Hacks",
+    state: "India",
+    season: "All Year",
     image: packingImg,
     date: "Jan 25, 2025",
     readTime: "8 min read",
@@ -287,6 +314,8 @@ export const POSTS: BlogPost[] = [
     title: "Camping vs. Hotels: When Does It Actually Save Money?",
     excerpt: "Camping isn't always cheaper. We break down the costs of buying gear vs. renting spots vs. budget hotels.",
     category: "Budget Hacks",
+    state: "Himachal Pradesh",
+    season: "Summer",
     image: campingImg,
     date: "Jan 20, 2025",
     readTime: "9 min read",
@@ -303,6 +332,8 @@ export const POSTS: BlogPost[] = [
     title: "The Unreserved General Class Guide: Extreme Budget Travel",
     excerpt: "Traveling across India for ₹500? It's possible if you dare to take the General Class. Survival tips inside.",
     category: "Budget Hacks",
+    state: "India",
+    season: "All Year",
     image: localTrainImg,
     date: "Jan 15, 2025",
     readTime: "11 min read",
@@ -319,6 +350,8 @@ export const POSTS: BlogPost[] = [
     title: "Stop Buying Water: Save ₹3000/Month and the Planet",
     excerpt: "Bottled water adds up fast. Why you need a filtered bottle or how to find free RO water stations across India.",
     category: "Budget Hacks",
+    state: "India",
+    season: "All Year",
     image: waterBottleImg,
     date: "Jan 10, 2025",
     readTime: "5 min read",
@@ -335,6 +368,8 @@ export const POSTS: BlogPost[] = [
     title: "The Power of a Student ID: Discounts You Didn't Know Existed",
     excerpt: "From monuments to flight tickets, your college ID is a goldmine. Here is where you can use it.",
     category: "Budget Hacks",
+    state: "India",
+    season: "All Year",
     image: studentIdImg,
     date: "Jan 08, 2025",
     readTime: "6 min read",
@@ -349,4 +384,12 @@ export const POSTS: BlogPost[] = [
 
 export const CATEGORIES = [
   "Workations", "Budget Hacks", "Sustainable Travel", "Itineraries", "Gear Reviews", "Destinations", "Culture", "Festivals"
+];
+
+export const STATES = [
+  "Himachal Pradesh", "Uttarakhand", "Kerala", "Rajasthan", "Goa", "Karnataka", "Arunachal Pradesh", "Gujarat", "Andaman & Nicobar", "Uttar Pradesh", "India"
+];
+
+export const SEASONS = [
+  "Winter", "Summer", "Monsoon", "Autumn", "All Year"
 ];
