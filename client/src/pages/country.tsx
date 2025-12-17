@@ -1,11 +1,10 @@
 import { Link, useRoute } from "wouter";
 import { POSTS, TOURIST_PLACES } from "@/lib/data";
 import { Header, Footer } from "@/components/layout";
-import { ArrowRight, MapPin, Calendar, Clock, Star } from "lucide-react";
+import { ArrowRight, MapPin, Calendar, Clock, Star, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/seo";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
-import { TopDestinations } from "@/components/top-destinations";
 import { useState } from "react";
 import {
   Pagination,
@@ -15,6 +14,13 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function Country() {
   const [match, params] = useRoute("/country/:name");
@@ -35,6 +41,19 @@ export default function Country() {
   const countryTouristPlaces = TOURIST_PLACES.filter(place => 
     place.country.toLowerCase() === countryName.toLowerCase()
   );
+
+  // Get other countries for the carousel
+  const allCountries = Array.from(new Set(TOURIST_PLACES.map(p => p.country)));
+  const otherCountries = allCountries
+    .filter(c => c.toLowerCase() !== countryName.toLowerCase())
+    .map(c => {
+      // Find a representative image for the country
+      const place = TOURIST_PLACES.find(p => p.country === c);
+      return {
+        name: c,
+        image: place?.image || ""
+      };
+    });
 
   const totalPages = Math.ceil(countryTouristPlaces.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -59,7 +78,13 @@ export default function Country() {
         <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-slate-900">
           <div className="absolute inset-0 z-0 opacity-60">
              {/* Use a relevant image if available, otherwise a gradient/pattern */}
-             {countryPosts.length > 0 ? (
+             {countryTouristPlaces.length > 0 ? (
+               <img 
+                 src={countryTouristPlaces[0].image} 
+                 alt={countryName} 
+                 className="w-full h-full object-cover"
+               />
+             ) : countryPosts.length > 0 ? (
                <img 
                  src={countryPosts[0].image} 
                  alt={countryName} 
@@ -84,13 +109,13 @@ export default function Country() {
           </div>
         </section>
 
-        {/* Tourist Places Section */}
+        {/* Tourist Places Section (Travel Destinations) */}
         {countryTouristPlaces.length > 0 && (
           <section className="py-20 bg-white">
             <div className="container mx-auto px-4">
               <div className="text-center mb-12">
                 <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Must Visit</span>
-                <h2 className="text-4xl font-serif font-bold text-gray-900">Top Tourist Places in {countryName}</h2>
+                <h2 className="text-4xl font-serif font-bold text-gray-900">Travel Destinations in {countryName}</h2>
                 <div className="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
               </div>
 
@@ -182,6 +207,11 @@ export default function Country() {
               ]}
               className="mb-8"
             />
+            
+            <div className="text-center mb-12">
+               <h2 className="text-3xl font-serif font-bold text-gray-900">Latest Guides from {countryName}</h2>
+            </div>
+
             {countryPosts.length > 0 ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {countryPosts.map((post) => (
@@ -231,25 +261,67 @@ export default function Country() {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-20 bg-white rounded-3xl border border-dashed border-slate-300">
+              <div className="text-center py-10 bg-white rounded-3xl border border-dashed border-slate-300">
                 <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 text-slate-400">
                   <MapPin className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-serif font-bold text-gray-900 mb-3">No guides yet for {countryName}</h3>
+                <h3 className="text-2xl font-serif font-bold text-gray-900 mb-3">No specific guides yet for {countryName}</h3>
                 <p className="text-muted-foreground max-w-md mx-auto mb-8">
-                  We are currently working on creating comprehensive guides for {countryName}. Check back soon or explore other destinations!
+                  We are working on it! Meanwhile, check out the travel destinations above.
                 </p>
-                <Link href="/">
-                  <Button size="lg" className="rounded-full px-8">
-                    Explore Other Destinations
-                  </Button>
-                </Link>
               </div>
             )}
           </div>
         </section>
-        {/* Top Destinations */}
-        <TopDestinations />
+
+        {/* Other Countries Carousel */}
+        <section className="py-24 bg-white border-t">
+          <div className="container mx-auto px-4">
+            <div className="flex items-end justify-between mb-12">
+              <div>
+                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2 block">Expand Your Horizons</span>
+                <h2 className="text-4xl font-serif font-bold text-gray-900">Explore Other Countries</h2>
+              </div>
+              <div className="hidden md:flex gap-2">
+                {/* Carousel arrows will be positioned here if we want custom ones, but default are fine */}
+              </div>
+            </div>
+
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {otherCountries.map((country) => (
+                  <CarouselItem key={country.name} className="pl-4 md:basis-1/2 lg:basis-1/4">
+                    <Link href={`/country/${country.name}`}>
+                      <div className="group relative aspect-[3/4] overflow-hidden rounded-2xl cursor-pointer">
+                        <img 
+                          src={country.image} 
+                          alt={country.name} 
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
+                        <div className="absolute bottom-0 left-0 p-6">
+                          <div className="flex items-center gap-2 text-white/90 text-xs mb-2 font-medium uppercase tracking-wider">
+                            <Globe className="w-3 h-3" />
+                            Discover
+                          </div>
+                          <h3 className="text-2xl font-bold text-white font-serif">{country.name}</h3>
+                        </div>
+                      </div>
+                    </Link>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex -left-4" />
+              <CarouselNext className="hidden md:flex -right-4" />
+            </Carousel>
+          </div>
+        </section>
       </main>
 
       <Footer />
