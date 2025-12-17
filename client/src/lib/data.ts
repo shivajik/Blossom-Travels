@@ -401,6 +401,41 @@ export const POSTS: BlogPost[] = [
   }
 ];
 
+export const CATEGORY_DETAILS: Record<string, { description: string, subTopics: string[] }> = {
+  "Workations": {
+    description: "Find the best places to work remotely. We review WiFi speeds, coworking spaces, and community vibes.",
+    subTopics: ["Coliving Spaces", "Digital Nomad Visas", "Cafe Reviews", "Tech Gear"]
+  },
+  "Budget Hacks": {
+    description: "Travel longer for less. Expert tips on saving money on flights, accommodation, and food without missing out.",
+    subTopics: ["Cheap Flights", "Hostel Life", "Street Food Guide", "Transport Hacks"]
+  },
+  "Sustainable Travel": {
+    description: "Leave no trace. Guides on eco-friendly stays, volunteering, and ethical animal tourism.",
+    subTopics: ["Eco Lodges", "Volunteering", "Plastic-Free Tips", "Community Tourism"]
+  },
+  "Itineraries": {
+    description: "Day-by-day plans crafted by experts. From weekend getaways to month-long expeditions.",
+    subTopics: ["Weekend Trips", "Road Trips", "Backpacking Routes", "Family Vacations"]
+  },
+  "Gear Reviews": {
+    description: "Tested in the field. Honest reviews of backpacks, cameras, shoes, and tech for travelers.",
+    subTopics: ["Backpacks", "Cameras", "Clothing", "Travel Tech"]
+  },
+  "Destinations": {
+    description: "Deep dives into specific locations. Where to stay, what to eat, and hidden gems.",
+    subTopics: ["Beaches", "Mountains", "Cities", "Offbeat"]
+  },
+  "Culture": {
+    description: "Immerse yourself. Festivals, food history, art, and local traditions.",
+    subTopics: ["Food History", "Art & Craft", "Local Traditions", "Language"]
+  },
+  "Festivals": {
+    description: "Celebrate with the locals. Guides to the best music, cultural, and religious festivals.",
+    subTopics: ["Music Festivals", "Religious Events", "Cultural Fairs", "Seasonal Events"]
+  }
+};
+
 export const CATEGORIES = [
   "Workations", "Budget Hacks", "Sustainable Travel", "Itineraries", "Gear Reviews", "Destinations", "Culture", "Festivals"
 ];
