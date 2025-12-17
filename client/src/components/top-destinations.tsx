@@ -1,4 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Link } from "wouter";
 
 const TOP_ATTRACTIONS = [
   "Eiffel Tower", "Colosseum", "Statue of Liberty", "Machu Picchu", "Taj Mahal", "Great Wall of China", 
@@ -79,10 +80,12 @@ export function TopDestinations() {
           <TabsContent value="countries" className="mt-0">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-4 gap-x-8">
               {TOP_COUNTRIES.map((item, i) => (
-                <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                  <span className="font-medium text-gray-900 w-6">{i + 1}.</span>
-                  {item}
-                </div>
+                <Link key={item} href={`/country/${item}`}>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary cursor-pointer transition-colors">
+                    <span className="font-medium text-gray-900 w-6">{i + 1}.</span>
+                    {item}
+                  </div>
+                </Link>
               ))}
             </div>
           </TabsContent>
