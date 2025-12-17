@@ -466,6 +466,10 @@ export interface TouristPlace {
   image: string;
   description: string;
   rating: number;
+  bestTime?: string;
+  entryFee?: string;
+  timings?: string;
+  reviews?: number;
 }
 
 export const TOURIST_PLACES: TouristPlace[] = [
@@ -475,8 +479,12 @@ export const TOURIST_PLACES: TouristPlace[] = [
     country: "India",
     location: "Agra, Uttar Pradesh",
     image: tajMahalImg,
-    description: "An immense mausoleum of white marble, built in Agra between 1631 and 1648 by order of the Mughal emperor Shah Jahan in memory of his favourite wife.",
-    rating: 4.9
+    description: "An immense mausoleum of white marble, built in Agra between 1631 and 1648 by order of the Mughal emperor Shah Jahan in memory of his favourite wife. It is one of the Seven Wonders of the World and a symbol of eternal love.",
+    rating: 4.9,
+    bestTime: "October to March",
+    entryFee: "₹50 (Indians), ₹1100 (Foreigners)",
+    timings: "Sunrise to Sunset (Closed on Fridays)",
+    reviews: 12500
   },
   {
     id: "2",
@@ -484,8 +492,12 @@ export const TOURIST_PLACES: TouristPlace[] = [
     country: "India",
     location: "Alleppey, Kerala",
     image: keralaImg,
-    description: "A network of brackish lagoons and lakes lying parallel to the Arabian Sea coast (known as the Malabar Coast) of Kerala state in southern India.",
-    rating: 4.8
+    description: "A network of brackish lagoons and lakes lying parallel to the Arabian Sea coast (known as the Malabar Coast) of Kerala state in southern India. Houseboat cruises here are a unique experience.",
+    rating: 4.8,
+    bestTime: "September to March",
+    entryFee: "Varies by Houseboat",
+    timings: "24 Hours",
+    reviews: 8400
   },
   {
     id: "3",
@@ -493,8 +505,12 @@ export const TOURIST_PLACES: TouristPlace[] = [
     country: "India",
     location: "Jaipur, Rajasthan",
     image: hawaMahalImg,
-    description: "The 'Palace of Winds' is a palace in Jaipur, India. It is constructed of red and pink sandstone and is famous for its unique honeycomb structure.",
-    rating: 4.6
+    description: "The 'Palace of Winds' is a palace in Jaipur, India. It is constructed of red and pink sandstone and is famous for its unique honeycomb structure with 953 small windows called Jharokhas.",
+    rating: 4.6,
+    bestTime: "October to March",
+    entryFee: "₹50 (Indians), ₹200 (Foreigners)",
+    timings: "9:00 AM - 4:30 PM",
+    reviews: 6200
   },
   {
     id: "4",
@@ -502,8 +518,12 @@ export const TOURIST_PLACES: TouristPlace[] = [
     country: "India",
     location: "Ladakh",
     image: pangongImg,
-    description: "An endorheic lake in the Himalayas situated at a height of about 4,350 m. It is 134 km long and extends from India to China.",
-    rating: 4.9
+    description: "An endorheic lake in the Himalayas situated at a height of about 4,350 m. It is 134 km long and extends from India to China. The lake is famous for its changing colors from shades of blue to green to red.",
+    rating: 4.9,
+    bestTime: "May to September",
+    entryFee: "Permit Required",
+    timings: "Sunrise to Sunset",
+    reviews: 5100
   },
   {
     id: "5",
@@ -511,8 +531,12 @@ export const TOURIST_PLACES: TouristPlace[] = [
     country: "India",
     location: "Munnar, Kerala",
     image: munnarImg,
-    description: "Munnar is a town and hill station in the Idukki district of the southwestern Indian state of Kerala. It is famous for its rolling hills of tea plantations.",
-    rating: 4.7
+    description: "Munnar is a town and hill station in the Idukki district of the southwestern Indian state of Kerala. It is famous for its rolling hills of tea plantations, mist-covered valleys, and rare flora like the Neelakurinji.",
+    rating: 4.7,
+    bestTime: "September to March",
+    entryFee: "Free (Museums charge entry)",
+    timings: "9:00 AM - 5:00 PM",
+    reviews: 7300
   },
   {
     id: "6",
@@ -520,8 +544,12 @@ export const TOURIST_PLACES: TouristPlace[] = [
     country: "India",
     location: "Udaipur, Rajasthan",
     image: udaipurImg,
-    description: "A former summer palace of the royal dynasty of Mewar, now a luxury hotel. It is located on the island of Jag Niwas in Lake Pichola.",
-    rating: 4.8
+    description: "A former summer palace of the royal dynasty of Mewar, now a luxury hotel. It is located on the island of Jag Niwas in Lake Pichola. The white marble walls and the setting make it look like it's floating on the lake.",
+    rating: 4.8,
+    bestTime: "October to March",
+    entryFee: "Restricted to Guests/Tours",
+    timings: "24 Hours (For Guests)",
+    reviews: 4100
   },
   {
     id: "7",
@@ -529,8 +557,12 @@ export const TOURIST_PLACES: TouristPlace[] = [
     country: "India",
     location: "Mysore, Karnataka",
     image: mysoreImg,
-    description: "A historical palace and a royal residence at Mysore in the Indian State of Karnataka. It is the official residence of the Wadiyar dynasty.",
-    rating: 4.7
+    description: "A historical palace and a royal residence at Mysore in the Indian State of Karnataka. It is the official residence of the Wadiyar dynasty. The palace is a blend of Hindu, Mughal, Rajput, and Gothic styles.",
+    rating: 4.7,
+    bestTime: "October to February",
+    entryFee: "₹70 (Indians), ₹200 (Foreigners)",
+    timings: "10:00 AM - 5:30 PM",
+    reviews: 9800
   },
   {
     id: "8",
@@ -538,8 +570,12 @@ export const TOURIST_PLACES: TouristPlace[] = [
     country: "India",
     location: "Uttarakhand",
     image: rishikeshImg,
-    description: "Known as the 'Yoga Capital of the World', it lies at the foothills of the Himalayas and is famous for river rafting and spiritual retreats.",
-    rating: 4.6
+    description: "Known as the 'Yoga Capital of the World', it lies at the foothills of the Himalayas and is famous for river rafting, spiritual retreats, and the iconic Laxman Jhula.",
+    rating: 4.6,
+    bestTime: "February to May, September to November",
+    entryFee: "Free",
+    timings: "24 Hours",
+    reviews: 6500
   },
   {
     id: "9",
@@ -547,8 +583,12 @@ export const TOURIST_PLACES: TouristPlace[] = [
     country: "India",
     location: "Amritsar, Punjab",
     image: goldenTempleImg,
-    description: "The holiest Gurdwara of Sikhism, located in the city of Amritsar, Punjab, India. It is famous for its gilded dome and the sacred pool.",
-    rating: 4.9
+    description: "The holiest Gurdwara of Sikhism, located in the city of Amritsar, Punjab, India. It is famous for its gilded dome, the sacred pool, and the Langar (community kitchen) that serves thousands daily.",
+    rating: 4.9,
+    bestTime: "October to March",
+    entryFee: "Free",
+    timings: "24 Hours",
+    reviews: 15000
   },
   {
     id: "10",
@@ -556,8 +596,12 @@ export const TOURIST_PLACES: TouristPlace[] = [
     country: "India",
     location: "Varanasi, Uttar Pradesh",
     image: varanasiImg,
-    description: "The riverfront steps leading to the banks of the River Ganges. The city has 88 ghats, most of which are used for bathing and puja ceremonies.",
-    rating: 4.8
+    description: "The riverfront steps leading to the banks of the River Ganges. The city has 88 ghats, most of which are used for bathing and puja ceremonies. Dashashwamedh Ghat is famous for the evening Ganga Aarti.",
+    rating: 4.8,
+    bestTime: "November to February",
+    entryFee: "Free (Boat rides chargeable)",
+    timings: "24 Hours",
+    reviews: 11000
   },
   {
     id: "11",
@@ -565,8 +609,12 @@ export const TOURIST_PLACES: TouristPlace[] = [
     country: "India",
     location: "Manali, Himachal Pradesh",
     image: manaliImg,
-    description: "A side valley at the top of the Kullu Valley in Himachal Pradesh, known for its summer and winter sport conditions.",
-    rating: 4.5
+    description: "A side valley at the top of the Kullu Valley in Himachal Pradesh, known for its summer and winter sport conditions. It offers skiing, paragliding, and breathtaking views of snow-capped peaks.",
+    rating: 4.5,
+    bestTime: "December to February (Snow), April to June (Summer)",
+    entryFee: "Free (Activities chargeable)",
+    timings: "9:00 AM - 6:00 PM",
+    reviews: 5800
   },
   {
     id: "12",
@@ -574,7 +622,11 @@ export const TOURIST_PLACES: TouristPlace[] = [
     country: "India",
     location: "Havelock Island, Andaman",
     image: andamanImg,
-    description: "Ranked as one of the best beaches in Asia, known for its pristine white sand and turquoise blue waters.",
-    rating: 4.9
+    description: "Ranked as one of the best beaches in Asia, known for its pristine white sand and turquoise blue waters. It is perfect for swimming and watching the sunset.",
+    rating: 4.9,
+    bestTime: "October to May",
+    entryFee: "Free",
+    timings: "Sunrise to Sunset",
+    reviews: 4500
   }
 ];

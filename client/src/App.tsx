@@ -16,6 +16,7 @@ import Disclaimer from "@/pages/disclaimer";
 import Contact from "@/pages/contact";
 import Explore from "@/pages/explore";
 import Country from "@/pages/country";
+import Place from "@/pages/place";
 
 function Router() {
   return (
@@ -25,6 +26,7 @@ function Router() {
       <Route path="/post/:slug" component={Post} />
       <Route path="/category/:name" component={Category} />
       <Route path="/country/:name" component={Country} />
+      <Route path="/place/:id" component={Place} />
       <Route path="/about" component={About} />
       <Route path="/privacy-policy" component={Privacy} />
       <Route path="/terms-conditions" component={Terms} />

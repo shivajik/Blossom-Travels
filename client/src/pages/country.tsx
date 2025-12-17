@@ -5,6 +5,7 @@ import { ArrowRight, MapPin, Calendar, Clock, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/seo";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { TopDestinations } from "@/components/top-destinations";
 import { useState } from "react";
 import {
   Pagination,
@@ -95,30 +96,32 @@ export default function Country() {
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 {currentPlaces.map((place) => (
-                  <div key={place.id} className="group relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col h-full border border-slate-100">
-                    <div className="aspect-[4/3] overflow-hidden relative">
-                      <img 
-                        src={place.image} 
-                        alt={place.name} 
-                        loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute top-3 right-3 bg-white/95 backdrop-blur px-2 py-1 rounded-md text-sm font-bold text-amber-500 shadow-sm flex items-center gap-1">
-                        <Star className="w-3.5 h-3.5 fill-current" />
-                        {place.rating}
+                  <Link key={place.id} href={`/place/${place.id}`}>
+                    <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col h-full border border-slate-100 cursor-pointer">
+                      <div className="aspect-[4/3] overflow-hidden relative">
+                        <img 
+                          src={place.image} 
+                          alt={place.name} 
+                          loading="lazy"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                        <div className="absolute top-3 right-3 bg-white/95 backdrop-blur px-2 py-1 rounded-md text-sm font-bold text-amber-500 shadow-sm flex items-center gap-1">
+                          <Star className="w-3.5 h-3.5 fill-current" />
+                          {place.rating}
+                        </div>
+                      </div>
+                      <div className="p-5 flex-1 flex flex-col">
+                        <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors">{place.name}</h3>
+                        <div className="flex items-center gap-1 text-slate-500 text-xs font-medium mb-3 uppercase tracking-wide">
+                          <MapPin className="w-3 h-3" />
+                          {place.location}
+                        </div>
+                        <p className="text-slate-600 text-sm leading-relaxed line-clamp-3 mb-4 flex-1">
+                          {place.description}
+                        </p>
                       </div>
                     </div>
-                    <div className="p-5 flex-1 flex flex-col">
-                      <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors">{place.name}</h3>
-                      <div className="flex items-center gap-1 text-slate-500 text-xs font-medium mb-3 uppercase tracking-wide">
-                        <MapPin className="w-3 h-3" />
-                        {place.location}
-                      </div>
-                      <p className="text-slate-600 text-sm leading-relaxed line-clamp-3 mb-4 flex-1">
-                        {place.description}
-                      </p>
-                    </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
 
@@ -245,6 +248,8 @@ export default function Country() {
             )}
           </div>
         </section>
+        {/* Top Destinations */}
+        <TopDestinations />
       </main>
 
       <Footer />
