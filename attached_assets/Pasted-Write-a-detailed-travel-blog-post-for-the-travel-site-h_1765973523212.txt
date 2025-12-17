@@ -1,0 +1,52 @@
+Write a detailed travel blog post for the travel site https://www.blossomtravels.com/.
+
+1. **Review existing content**
+   - Analyze all travel pages and places listed on the Blossom Travels website (e.g., Places-to-See, travel packages like Ajanta Ellora Caves, Aurangabad tours, etc.). :contentReference[oaicite:0]{index=0}
+   - Identify where information is missing or incomplete about travel destinations, attractions, history, best time to visit, travel tips, local culture, and how to reach.
+
+2. **Create a full travel destination post structure**
+   Include the following sections:
+   - **Title & Meta Description**
+   - **Introduction** (brief overview of the destination and why it’s worth visiting)
+   - **About Blossom Travels Services**
+     - Briefly explain the services offered by Blossom Travels, like cab rental, taxi service, guides, hotel booking, regional travel support, etc. :contentReference[oaicite:1]{index=1}
+   - **Detailed Destination Sections**
+     For each major place (example: *Ajanta Caves*, *Ellora Caves*, *Aurangabad City*, *Shirdi*, *Bibi Ka Maqbara*, etc.):
+     - **Overview & History**
+     - **Top Attractions with details**
+     - **Best Time to Visit**
+     - **How to Reach**
+     - **Suggested Itinerary**
+     - **Nearby Places (Internal Links)** — Interlink each place with other relevant places and categories on the website.
+       Example: Link Ajanta → Nearby Ellora Caves; Link Ajanta/Ellora → Aurangabad City.
+   - **Transportation & Local Logistics**
+     - Include details on cab, coach, or rental services provided by Blossom Travels, how visitors can book from Aurangabad (Chhatrapati Sambhaji Nagar), links to service pages, etc. :contentReference[oaicite:2]{index=2}
+
+3. **Add missing place information**
+   - For each destination, check if detailed history, cultural context, geographical facts, itinerary ideas, and travel tips are missing. If they are:
+     - *Write complete paragraphs with supporting details and factual travel information.*
+     - Use general travel resources for accurate data (e.g., history of cave sites, UNESCO info, cultural relevance).
+     - Ensure any authoritative sources are mentioned and credited where appropriate.
+
+4. **Internal linking and SEO optimization**
+   - Link every place name and category to internal “Places-to-See” or category pages on Blossom Travels.
+   - Use clear headings, subheadings, bullet lists, and engaging descriptions.
+   - Add relevant keywords like “Aurangabad travel guide”, “Ajanta & Ellora itinerary”, “Best time to visit Ellora Caves”, etc.
+   - Include ALT text suggestions for images, and caption prompts (e.g., scenic views, UNESCO world heritage site features, travel experiences).
+
+5. **Travel tips & local insights**
+   - Add tips such as:
+     - Safety & local etiquette
+     - Best time & weather suggestions
+     - Estimated budget & packing suggestions
+     - Food & local cuisine details
+
+6. **Conclusion**
+   - Summarize key highlights.
+   - Add a call-to-action encouraging visitors to book travel packages or cab services via Blossom Travels.
+
+7. **Formatting**
+   - Use markdown headings (H1, H2, H3), short paragraphs, numbered lists where needed, and **internal hyperlinks** for each place and category mentioned.
+
+Output the final post as **ready-to-publish HTML or markdown format** for a travel blog.
+
