@@ -1142,5 +1142,18 @@ export const TOURIST_PLACES: TouristPlace[] = [
     entryFee: "Varies by site",
     timings: "Sunrise (Balloons)",
     reviews: 70000
+  },
+  {
+    id: "34",
+    name: "Ajanta & Ellora Caves",
+    country: "India",
+    location: "Aurangabad, Maharashtra",
+    image: ajantaImg,
+    description: "UNESCO World Heritage Sites famous for ancient rock-cut caves. Ajanta features exquisite Buddhist paintings, while Ellora showcases a confluence of Buddhist, Hindu, and Jain rock-cut monuments, including the monolithic Kailasa Temple.",
+    rating: 4.8,
+    bestTime: "June to March",
+    entryFee: "₹40 (Indians), ₹600 (Foreigners)",
+    timings: "9:00 AM - 5:00 PM (Closed Mon/Tue)",
+    reviews: 35000
   }
 ];
