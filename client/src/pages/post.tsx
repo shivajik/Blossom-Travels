@@ -309,6 +309,114 @@ export default function Post() {
            </p>
         </>
       );
+    } else if (post.id === "30") { // Ajanta Ellora
+        return (
+            <>
+                <p className="lead text-xl text-gray-700 mb-8 drop-cap">
+                    Stepping into the Ajanta and Ellora Caves is like traveling back in time. These UNESCO World Heritage Sites are not just monuments; they are a testament to the artistic mastery and spiritual devotion of ancient India. Located near Aurangabad, they attract history buffs, pilgrims, and travelers from across the globe.
+                </p>
+
+                <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+                    <h3 className="font-bold text-lg mb-2 text-primary">Explore with Blossom Travels</h3>
+                    <p className="mb-4">
+                        Planning a trip to Aurangabad? <strong>Blossom Travels</strong> offers premium cab rental, hotel bookings, and guided tour packages. Whether you need an airport pickup or a 3-day heritage tour, we ensure a comfortable and hassle-free journey.
+                    </p>
+                    <ul className="list-disc pl-5 mb-4 space-y-1">
+                        <li>AC Cabs (Sedan, SUV, Tempo Traveller)</li>
+                        <li>Experienced Local Guides</li>
+                        <li>Customized Itineraries</li>
+                        <li>Hotel & Homestay Arrangements</li>
+                    </ul>
+                    <Button variant="default" size="sm">Book Your Cab Now</Button>
+                </div>
+
+                <h2 className="text-3xl font-serif font-bold mt-12 mb-6 text-gray-900">1. Ajanta Caves: The Canvas of Buddhism</h2>
+                <div className="aspect-video w-full rounded-xl overflow-hidden mb-6 bg-gray-100">
+                     <img src={post.image} alt="Ajanta Caves View" className="w-full h-full object-cover" />
+                </div>
+                <p>
+                    <strong>Distance from Aurangabad:</strong> ~100 km (2.5 - 3 hours)
+                </p>
+                <p>
+                    Carved into a horseshoe-shaped rock face overlooking the Waghora River, the Ajanta Caves consist of 30 rock-cut Buddhist cave monuments. Dating from the 2nd century BCE to about 480 CE, these caves are famous for their exquisite paintings and frescoes that depict the life of Buddha (Jataka Tales).
+                </p>
+                <h3 className="text-xl font-bold mt-6 mb-3">Key Attractions</h3>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Cave 1:</strong> Famous for the painting of Bodhisattva Padmapani.</li>
+                    <li><strong>Cave 19 & 26:</strong> Magnificent Chaitya halls (prayer halls) with stupas and intricate carvings.</li>
+                    <li><strong>Viewpoint:</strong> Trek up to the viewpoint across the river for a panoramic view of the entire cave complex.</li>
+                </ul>
+
+                <h2 className="text-3xl font-serif font-bold mt-12 mb-6 text-gray-900">2. Ellora Caves: A Confluence of Faiths</h2>
+                <p>
+                    <strong>Distance from Aurangabad:</strong> ~30 km (1 hour)
+                </p>
+                <p>
+                    Unlike Ajanta, which is purely Buddhist, Ellora represents the harmony of three faiths: Buddhism, Hinduism, and Jainism. There are 34 caves extending over more than 2 km, excavated from the basalt cliffs of the Charanandri Hills.
+                </p>
+                <h3 className="text-xl font-bold mt-6 mb-3">The Crown Jewel: Kailasa Temple (Cave 16)</h3>
+                <p>
+                    The Kailasa Temple is the largest monolithic rock excavation in the world. It was carved out of a single rock from the top down. The sheer scale and intricacy of the sculptures here will leave you speechless.
+                </p>
+
+                <h2 className="text-3xl font-serif font-bold mt-12 mb-6 text-gray-900">3. Other Must-Visit Places</h2>
+                
+                <h3 className="text-xl font-bold mt-8 mb-4">Bibi Ka Maqbara</h3>
+                <p>Often called the "Taj of the Deccan," this mausoleum was built by Azam Shah, son of Aurangzeb, in memory of his mother. It bears a striking resemblance to the Taj Mahal in Agra.</p>
+
+                <h3 className="text-xl font-bold mt-8 mb-4">Daulatabad Fort</h3>
+                <p>A formidable hill fortress with a complex defense system. The hike to the top offers panoramic views of the region.</p>
+
+                <h3 className="text-xl font-bold mt-8 mb-4">Shirdi Sai Baba Temple</h3>
+                <p>Located about 110 km from Aurangabad, Shirdi is one of the holiest pilgrimage sites in India. Many travelers combine their Ajanta-Ellora trip with a visit to Shirdi.</p>
+
+                <AdPlaceholder className="my-8" height="250px" label="Travel Package Ad" />
+
+                <h2 className="text-3xl font-serif font-bold mt-12 mb-6 text-gray-900">Suggested Itinerary (3 Days)</h2>
+                <ItineraryTimeline 
+                    items={[
+                        { day: "Day 1", title: "Arrival & Local Sightseeing", description: "Arrive in Aurangabad. Check-in to your hotel. Visit Bibi Ka Maqbara and Panchakki in the evening." },
+                        { day: "Day 2", title: "Ajanta Caves Excursion", description: "Start early (8 AM). Drive to Ajanta Caves. Spend 3-4 hours exploring. Return to Aurangabad by evening." },
+                        { day: "Day 3", title: "Ellora & Daulatabad", description: "Visit Ellora Caves in the morning. On the way back, stop at Daulatabad Fort and Grishneshwar Temple (Jyotirlinga)." }
+                    ]}
+                />
+
+                <h2 className="text-3xl font-serif font-bold mt-12 mb-6 text-gray-900">Transportation & Logistics</h2>
+                <p>
+                    Getting around Aurangabad is easiest with a private vehicle. <strong>Blossom Travels</strong> provides reliable transport solutions for tourists.
+                </p>
+                <div className="grid md:grid-cols-2 gap-6 my-6">
+                    <div className="bg-slate-50 p-6 rounded-xl border">
+                        <h4 className="font-bold mb-2">Our Fleet</h4>
+                        <ul className="text-sm space-y-2">
+                            <li>• Swift Dzire / Etios (Sedan)</li>
+                            <li>• Innova Crysta (SUV)</li>
+                            <li>• Tempo Traveller (For Groups)</li>
+                        </ul>
+                    </div>
+                    <div className="bg-slate-50 p-6 rounded-xl border">
+                        <h4 className="font-bold mb-2">Why Choose Us?</h4>
+                        <ul className="text-sm space-y-2">
+                            <li>• Transparent Pricing</li>
+                            <li>• Clean & Sanitized Cars</li>
+                            <li>• Knowledgeable Drivers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 className="text-3xl font-serif font-bold mt-12 mb-6 text-gray-900">Travel Tips</h2>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                    <li><strong>Closed Days:</strong> Ajanta Caves are closed on Mondays. Ellora Caves are closed on Tuesdays. Plan accordingly!</li>
+                    <li><strong>Footwear:</strong> There is a lot of walking involved. Wear comfortable shoes (slip-ons are best as you have to remove them entering temples/caves).</li>
+                    <li><strong>Guides:</strong> Hiring a government-approved guide at Ajanta and Ellora is highly recommended to understand the history and stories behind the carvings.</li>
+                </ul>
+
+                <p className="text-lg font-medium text-center mt-12 p-6 bg-primary/10 rounded-xl">
+                    Ready to explore the heritage of Maharashtra? <br/>
+                    <Link href="/contact" className="text-primary hover:underline">Contact Blossom Travels</Link> to book your tour today!
+                </p>
+            </>
+        );
     } else if (["2", "7", "8", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"].includes(post.id)) {
         // Return default content for all other posts (including new budget hacks)
         return renderDefaultContent();

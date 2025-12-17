@@ -62,6 +62,7 @@ import swissAlpsImg from "@assets/stock_images/swiss_alps_hiking_016159f8.jpg";
 import northernLightsImg from "@assets/stock_images/northern_lights_icel_893e8117.jpg";
 import safariImg from "@assets/stock_images/safari_south_africa_ef5f3191.jpg";
 import cherryBlossomsImg from "@assets/stock_images/cherry_blossoms_japa_587955b9.jpg";
+import ajantaImg from "@assets/stock_images/ajanta_and_ellora_ca_e22276f8.jpg";
 
 
 export const AUTHOR = {
@@ -626,6 +627,26 @@ export const POSTS: BlogPost[] = [
     relatedQuestions: [
         { question: "Do I need to tip in Rome?", answer: "Tipping is not mandatory in Italy as a 'coperto' (cover charge) is usually added. Leaving 1-2 Euros or rounding up is appreciated but not expected." },
         { question: "What time is dinner in Rome?", answer: "Romans eat late. Dinner service typically starts at 7:30 PM, but restaurants get busy around 8:30 PM or 9:00 PM." }
+    ],
+    content: null
+  },
+  {
+    id: "30",
+    slug: "ajanta-ellora-caves-aurangabad-travel-guide",
+    title: "Ajanta & Ellora Caves: The Ultimate Travel Guide to Aurangabad's UNESCO Treasures",
+    excerpt: "Explore the ancient rock-cut caves of Ajanta and Ellora, divine Shirdi, and the historic city of Aurangabad. A complete itinerary and travel guide.",
+    category: "Destinations",
+    state: "Maharashtra",
+    country: "India",
+    season: "Winter/Monsoon",
+    image: ajantaImg,
+    date: "Dec 18, 2025",
+    readTime: "15 min read",
+    snippet: "Ajanta and Ellora Caves are UNESCO World Heritage Sites located near Aurangabad. Ajanta is famous for Buddhist paintings, while Ellora features Hindu, Buddhist, and Jain sculptures, including the monolithic Kailasa Temple.",
+    relatedQuestions: [
+      { question: "How many days are needed for Ajanta and Ellora?", answer: "You need at least 2 days: one full day for Ajanta (100km away) and another for Ellora and Aurangabad city sights." },
+      { question: "Best time to visit Ajanta Ellora?", answer: "June to March is ideal. Monsoons (June-Sept) make the surroundings lush green, while winter (Oct-March) is pleasant for walking." },
+      { question: "How to reach Ajanta Caves from Aurangabad?", answer: "Ajanta is about 100km from Aurangabad. The best way is to hire a cab from Blossom Travels or take a state transport bus." }
     ],
     content: null
   }
