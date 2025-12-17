@@ -96,6 +96,7 @@ export default function Explore() {
                         <img 
                           src={post.image} 
                           alt={post.title}
+                          loading="lazy"
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         />
                         <div className="absolute top-3 left-3 flex flex-wrap gap-2">

@@ -84,6 +84,7 @@ export default function Category() {
                    <img 
                      src={post.image} 
                      alt={post.title}
+                     loading="lazy"
                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                    />
                    <div className="absolute top-4 left-4 bg-white/95 backdrop-blur px-4 py-1.5 rounded-full text-xs font-bold text-primary uppercase tracking-wider shadow-sm">
